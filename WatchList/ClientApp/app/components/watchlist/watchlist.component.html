@@ -1,0 +1,46 @@
+﻿<h1>Watchlist</h1>
+
+<p>This is your watchlist.</p>
+
+<p *ngIf="!titleList"><em>Loading...</em></p>
+
+<p>
+    <a [routerLink]="['/register-title']">Create New</a>
+</p>
+
+<table class='table' *ngIf="titleList">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Director</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Score</th>
+            <th>IMDB_Url</th>
+            <th>IMDB_UserRating</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let elem of titleList">
+            <td>{{ elem.id }}</td>
+            <td>{{ elem.name }}</td>
+            <td>{{ elem.director }}</td>
+            <td>{{ elem.description }}</td>
+            <td align="center">
+                <select name={{elem.status}}>
+                    <option value=0>Planned to watch</option>
+                    <option value=1>Watched</option>
+                </select>
+            </td>
+            <td>{{ elem.score }}</td>
+            <td>{{ elem.imdbu }}</td>
+            <td>{{ elem.imdbr }}</td>
+            <td>
+            <td>
+                <a [routerLink]="['/watchlist/edit/', elem.id]">Edit</a> |
+                <a [routerLink]="" (click)="delete(elem.id)">Delete</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

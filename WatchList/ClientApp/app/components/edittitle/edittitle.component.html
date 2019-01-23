@@ -1,0 +1,80 @@
+<h1>{{title}}</h1>
+<h3>Title Edit</h3>
+<hr />
+
+<form [formGroup]="titleForm" (ngSubmit)="save()" #formDir="ngForm" novalidate>
+
+    <div class="form-group row">
+        <label class=" control-label col-md-12" for="Name">Title</label>
+        <div class="col-md-4">
+            <input class="form-control" type="text" formControlName="name">
+        </div>
+        <span class="text-danger" *ngIf="name.invalid && formDir.submitted">
+            Name is required.
+        </span>
+    </div>
+    <div class="form-group row">
+        <label class=" control-label col-md-12" for="Description">Description</label>
+        <div class="col-md-4">
+            <input class="form-control" type="text" formControlName="description">
+        </div>
+        <span class="text-danger" *ngIf="description.invalid && formDir.submitted">
+            Description is required.
+        </span>
+    </div>
+    <div class="form-group row">
+        <label class="control-label col-md-12" for="Director">Director</label>
+        <div class="col-md-4">
+            <input class="form-control" type="text" formControlName="director">
+        </div>
+        <span class="text-danger" *ngIf="director.invalid && formDir.submitted">
+            Director is required
+        </span>
+    </div>
+    <div class="form-group row">
+        <label class="control-label col-md-12" for="Status">Status</label>
+        <div class="col-md-4">
+            <select class="form-control" data-val="" formControlName="status">
+                <option value="">-- Select Status --</option>
+                <option value=0>Planned to watch</option>
+                <option value=1>Watched</option>
+            </select>
+        </div>
+        <span class="text-danger" *ngIf="status.invalid && formDir.submitted">
+            Status is required
+        </span>
+    </div>
+    <div class="form-group row">
+        <label class="control-label col-md-12" for="Score">UserScore</label>
+        <div class="col-md-4">
+            <input class="form-control" type="text" formControlName="score">
+        </div>
+        <span class="text-danger" *ngIf="score.invalid && formDir.submitted">
+            UserScore is required
+        </span>
+    </div>
+    <div class="form-group row">
+        <label class="control-label col-md-12" for="IMDBU">IMDB_Url</label>
+        <div class="col-md-4">
+            <input class="form-control" type="text" formControlName="imdbu">
+        </div>
+        <span class="text-danger" *ngIf="imdbu.invalid && formDir.submitted">
+            IMDBU is required
+        </span>
+    </div>
+    <div class="form-group row">
+        <label class="control-label col-md-12"  for="IMDBR">IMDB_UsersRating</label>
+        <div class="col-md-4">
+            <input class="form-control" type="text" formControlName="imdbr">
+        </div>
+        <span class="text-danger" *ngIf="imdbr.invalid && formDir.submitted">
+            IMDBR is required
+        </span>
+    </div>
+    
+    <div class="form-group">
+        <button type="submit" class="btn btn-default">Save</button>
+        <button class="btn" (click)="cancel()">Cancel</button>
+    </div>
+</form>
+

@@ -1,0 +1,54 @@
+<h1>{{title}}</h1>
+<h3>Title</h3>
+<hr />
+
+<ng-template #create>
+    <h3> Create New Title </h3>
+</ng-template>
+<div>
+    <form [formGroup]="searchForm" (ngSubmit)="onTitleFormSubmit()">
+        <table>
+            <tr>
+                <td>Enter movie or TV show</td>
+                <td>
+                    <input formControlName="film">
+                    <label *ngIf="searchForm.get('film').invalid && processValidation" [ngClass]="'error'"> Title is required. </label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="submit" class="btn btn-default">Search</button>
+                    <button class="btn" (click)="cancel()">Cancel</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <br />
+    <div *ngIf="statusCode; else processing">
+        <div *ngIf="statusCode === 201" [ngClass]="'success'">
+            Title added successfully.
+        </div>
+        <div *ngIf="statusCode === 409" [ngClass]="'success'">
+            Title already exists.
+        </div>
+        <div *ngIf="statusCode === 200" [ngClass]="'success'">
+            Title updated successfully.
+        </div>
+        <div *ngIf="statusCode === 204" [ngClass]="'success'">
+            Title deleted successfully.
+        </div>
+        <div *ngIf="statusCode === 500" [ngClass]="'error'">
+            Internal Server Error.
+        </div>
+    </div>
+</div>
+ <h3>Title Details</h3>
+    <table>
+        <tr><th>Movie title</th> <th>Director</th></tr>
+        <tr *ngFor="let elem of allMovies">
+            <td><a href="{{elem.imdbu}}">{{elem.name}}&nbsp;</a></td>
+            <td>{{elem.director}}</td>
+            <td><button type="button" (click)="addTitle(elem)">Add</button> </td>
+        </tr>
+    </table>
+
