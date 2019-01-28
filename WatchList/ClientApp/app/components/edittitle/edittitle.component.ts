@@ -24,13 +24,8 @@ export class edittitle implements OnInit {
 
         this.titleForm = this._fb.group({
             id: 0,
-            name: ['', [Validators.required]],
-            director: ['', [Validators.required]],
-            description: ['', [Validators.required]],
             status: ['', [Validators.required]],
             score: ['', [Validators.required]],
-            imdbu: ['', [Validators.required]],
-            imdbr: ['', [Validators.required]],
         })
     }
 
@@ -68,13 +63,10 @@ export class edittitle implements OnInit {
         this._router.navigate(['/fetch-title']);
     }
 
-    get name() { return this.titleForm.get('name'); }
-    get director() { return this.titleForm.get('director'); }
-    get description() { return this.titleForm.get('description'); }
+    
     get status() { return this.titleForm.get('status'); }
     get score() { return this.titleForm.get('score'); }
-    get imdbu() { return this.titleForm.get('imdbu'); }
-    get imdbr() { return this.titleForm.get('imdbr'); }
+   
 }
 
 

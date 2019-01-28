@@ -4,33 +4,7 @@
 
 <form [formGroup]="titleForm" (ngSubmit)="save()" #formDir="ngForm" novalidate>
 
-    <div class="form-group row">
-        <label class=" control-label col-md-12" for="Name">Title</label>
-        <div class="col-md-4">
-            <input class="form-control" type="text" formControlName="name">
-        </div>
-        <span class="text-danger" *ngIf="name.invalid && formDir.submitted">
-            Name is required.
-        </span>
-    </div>
-    <div class="form-group row">
-        <label class=" control-label col-md-12" for="Description">Description</label>
-        <div class="col-md-4">
-            <input class="form-control" type="text" formControlName="description">
-        </div>
-        <span class="text-danger" *ngIf="description.invalid && formDir.submitted">
-            Description is required.
-        </span>
-    </div>
-    <div class="form-group row">
-        <label class="control-label col-md-12" for="Director">Director</label>
-        <div class="col-md-4">
-            <input class="form-control" type="text" formControlName="director">
-        </div>
-        <span class="text-danger" *ngIf="director.invalid && formDir.submitted">
-            Director is required
-        </span>
-    </div>
+    
     <div class="form-group row">
         <label class="control-label col-md-12" for="Status">Status</label>
         <div class="col-md-4">
@@ -51,24 +25,6 @@
         </div>
         <span class="text-danger" *ngIf="score.invalid && formDir.submitted">
             UserScore is required
-        </span>
-    </div>
-    <div class="form-group row">
-        <label class="control-label col-md-12" for="IMDBU">IMDB_Url</label>
-        <div class="col-md-4">
-            <input class="form-control" type="text" formControlName="imdbu">
-        </div>
-        <span class="text-danger" *ngIf="imdbu.invalid && formDir.submitted">
-            IMDBU is required
-        </span>
-    </div>
-    <div class="form-group row">
-        <label class="control-label col-md-12"  for="IMDBR">IMDB_UsersRating</label>
-        <div class="col-md-4">
-            <input class="form-control" type="text" formControlName="imdbr">
-        </div>
-        <span class="text-danger" *ngIf="imdbr.invalid && formDir.submitted">
-            IMDBR is required
         </span>
     </div>
     

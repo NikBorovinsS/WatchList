@@ -34,11 +34,15 @@ namespace WatchList.Models
                         elem.ID = Convert.ToInt32(rdr["Id"]);
                         elem.Name = rdr["Name"].ToString();
                         elem.Director = rdr["Director"].ToString();
-                        elem.Description = rdr["Description"].ToString();
                         elem.Status = Convert.ToInt32(rdr["Status"]);
                         elem.Score = Convert.ToInt32(rdr["Score"]);
                         elem.IMDBU = rdr["IMDBU"].ToString();
                         elem.IMDBR = rdr["IMDBR"].ToString();
+                        elem.IMGU = rdr["IMGU"].ToString();
+                        elem.TitleType = Convert.ToInt32(rdr["TitleType"]);
+                        elem.WatchProgress = Convert.ToInt32(rdr["WatchProgress"]);
+                        elem.Episodes = Convert.ToInt32(rdr["Episodes"]);
+                        elem.Notes = rdr["Notes"].ToString();
 
                         titles.Add(elem);
                     }
@@ -107,12 +111,16 @@ namespace WatchList.Models
 
                     cmd.Parameters.AddWithValue("@Name", title.Name);
                     cmd.Parameters.AddWithValue("@Director", title.Director);
-                    cmd.Parameters.AddWithValue("@Description", title.Description);
                     cmd.Parameters.AddWithValue("@IMDBU", title.IMDBU);
                     cmd.Parameters.AddWithValue("@IMDBR", title.IMDBR);
                     cmd.Parameters.AddWithValue("@Status", title.Status);
                     cmd.Parameters.AddWithValue("@Score", title.Score);
- 
+                    cmd.Parameters.AddWithValue("@IMGU", title.IMGU);
+                    cmd.Parameters.AddWithValue("@TitleType", title.TitleType);
+                    cmd.Parameters.AddWithValue("@WatchProgress", title.WatchProgress);
+                    cmd.Parameters.AddWithValue("@Episodes", title.Episodes);
+                    cmd.Parameters.AddWithValue("@Notes", title.Notes);
+
                     con.Open();
                     cmd.ExecuteNonQuery();
                     con.Close();
@@ -139,8 +147,6 @@ namespace WatchList.Models
             temp.Name = namelink[0].SelectSingleNode(".//h1").InnerText;
             var directorlink = resultWebdoc.DocumentNode.SelectNodes("//div[@class = 'credit_summary_item']");
             temp.Director = "0";//directorlink[0].InnerText;
-            var descriptionlink = resultWebdoc.DocumentNode.SelectNodes("//div[@class = 'summary_text']");
-            temp.Description = descriptionlink[0].InnerText;
             var ratinglink = resultWebdoc.DocumentNode.SelectNodes("//div[@class = 'ratingValue']");
             temp.IMDBR = "0";//ratinglink[t].InnerText;
 
@@ -158,14 +164,19 @@ namespace WatchList.Models
                     SqlCommand cmd = new SqlCommand("spUpdateTitleList", con);
                     cmd.CommandType = CommandType.StoredProcedure;
 
-                    cmd.Parameters.AddWithValue("@Name", title.Name);
+                    //cmd.Parameters.AddWithValue("@Name", title.Name);
                     cmd.Parameters.AddWithValue("@Id", title.ID);
-                    cmd.Parameters.AddWithValue("@Director", title.Director);
-                    cmd.Parameters.AddWithValue("@Description", title.Description);
-                    cmd.Parameters.AddWithValue("@IMDBU", title.IMDBU);
-                    cmd.Parameters.AddWithValue("@IMDBR", title.IMDBR);
+                    //cmd.Parameters.AddWithValue("@Director", title.Director);
+                    //cmd.Parameters.AddWithValue("@IMDBU", title.IMDBU);
+                    //cmd.Parameters.AddWithValue("@IMDBR", title.IMDBR);
                     cmd.Parameters.AddWithValue("@Status", title.Status);
                     cmd.Parameters.AddWithValue("@Score", title.Score);
+                    //cmd.Parameters.AddWithValue("@IMGU", title.IMGU);
+                    //cmd.Parameters.AddWithValue("@TitleType", title.TitleType);
+                    //cmd.Parameters.AddWithValue("@WatchProgress", title.WatchProgress);
+                    //cmd.Parameters.AddWithValue("@Episodes", title.Episodes);
+                    //cmd.Parameters.AddWithValue("@Notes",title.Notes);
+
 
                     con.Open();
                     cmd.ExecuteNonQuery();
@@ -198,12 +209,16 @@ namespace WatchList.Models
                         elem.ID = Convert.ToInt32(rdr["Id"]);
                         elem.Name = rdr["Name"].ToString();
                         elem.Director = rdr["Director"].ToString();
-                        elem.Description = rdr["Description"].ToString();
                         elem.Status = Convert.ToInt32(rdr["Status"]);
                         elem.Score = Convert.ToInt32(rdr["Score"]);
                         elem.IMDBU = rdr["IMDBU"].ToString();
                         elem.IMDBR = rdr["IMDBR"].ToString();
-                        
+                        elem.IMGU = rdr["IMGU"].ToString();
+                        elem.TitleType = Convert.ToInt32(rdr["TitleType"]);
+                        elem.WatchProgress = Convert.ToInt32(rdr["WatchProgress"]);
+                        elem.Episodes = Convert.ToInt32(rdr["Episodes"]);
+                        elem.Notes = rdr["Notes"].ToString();
+
                     }
                 }
                 return elem;

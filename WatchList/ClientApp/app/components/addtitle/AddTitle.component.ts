@@ -7,7 +7,9 @@ import { TitlesService } from '../../services/titles.service';
 
 @Component({
     selector: 'createtitle',
-    templateUrl: './AddTitle.component.html'
+    templateUrl: './AddTitle.component.html',
+    styleUrls: ['./AddTitle.component.css']
+
 })
 
 export class createtitle implements OnInit {
@@ -17,6 +19,7 @@ export class createtitle implements OnInit {
     id: number;
     errorMessage: any;
     processValidation = false;
+    visibleTable = false; 
     allMovies: MovieData[] = [];
 
     constructor(private _fb: FormBuilder, private _avRoute: ActivatedRoute,
@@ -34,7 +37,6 @@ export class createtitle implements OnInit {
             id: 0,
             name: ['', [Validators.required]],
             director: ['', [Validators.required]],
-            description: ['', [Validators.required]],
             status: ['', [Validators.required]],
             score: ['', [Validators.required]],
             imdbu: ['', [Validators.required]],
@@ -51,6 +53,7 @@ export class createtitle implements OnInit {
 
     onTitleFormSubmit() {
         this.processValidation = true;
+        this.visibleTable = true;
         if (this.searchForm.invalid) {
             return; //Validation failed, exit from method.
         }
@@ -99,7 +102,6 @@ interface MovieData {
     id: number;
     name: string;
     director: string;
-    description: string;
     status: number;
     score: number;
     imdbu: string;

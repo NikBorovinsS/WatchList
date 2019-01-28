@@ -13,8 +13,6 @@ namespace WatchList.Models
 
         public string Director { get; set; }
 
-        public string Description { get; set; }
-
         public int Status { get; set; }
 
         public int Score { get; set; }
@@ -22,6 +20,16 @@ namespace WatchList.Models
         public string IMDBU { get; set; }
         
         public string IMDBR { get; set; }
-        
+
+        public string IMGU { get; set; }
+
+        public int TitleType { get; set; }
+
+        public int WatchProgress { get; set; }
+
+        public string Notes { get; set; }
+
+        public int Episodes { get; set; }
+
     }
 }

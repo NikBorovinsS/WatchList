@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "580ba175ec43e3d7b47e"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "a6c62368b3be282c6ae7"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -704,7 +704,7 @@
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire(57)(__webpack_require__.s = 57);
+/******/ 	return hotCreateRequire(59)(__webpack_require__.s = 59);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -732,14 +732,14 @@ module.exports = (__webpack_require__(0))(0);
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TitlesService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_observable_throw__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_observable_throw__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_observable_throw___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_observable_throw__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -827,47 +827,6 @@ module.exports = (__webpack_require__(0))(41);
 
 /***/ }),
 /* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = (__webpack_require__(0))(38);
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = (__webpack_require__(0))(39);
-
-/***/ }),
-/* 7 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-var AppComponent = (function () {
-    function AppComponent() {
-    }
-    AppComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app',
-            template: __webpack_require__(28),
-            styles: [__webpack_require__(43)]
-        })
-    ], AppComponent);
-    return AppComponent;
-}());
-
-
-
-/***/ }),
-/* 8 */
 /***/ (function(module, exports) {
 
 /*
@@ -946,6 +905,47 @@ function toComment(sourceMap) {
 
 	return '/*# ' + data + ' */';
 }
+
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = (__webpack_require__(0))(38);
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = (__webpack_require__(0))(39);
+
+/***/ }),
+/* 8 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var AppComponent = (function () {
+    function AppComponent() {
+    }
+    AppComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app',
+            template: __webpack_require__(29),
+            styles: [__webpack_require__(45)]
+        })
+    ], AppComponent);
+    return AppComponent;
+}());
+
 
 
 /***/ }),
@@ -1150,14 +1150,14 @@ module.exports = Html5Entities;
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_reflect_metadata__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_reflect_metadata__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_reflect_metadata___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_reflect_metadata__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_zone_js__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_zone_js__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_zone_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_zone_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_bootstrap__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_bootstrap__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_bootstrap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_bootstrap__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser_dynamic__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser_dynamic__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_app_module_browser__ = __webpack_require__(15);
 
 
@@ -1200,7 +1200,7 @@ var options = {
   name: ''
 };
 if (true) {
-  var querystring = __webpack_require__(35);
+  var querystring = __webpack_require__(36);
   var overrides = querystring.parse(__resourceQuery.slice(1));
   if (overrides.path) options.path = overrides.path;
   if (overrides.timeout) options.timeout = overrides.timeout;
@@ -1320,11 +1320,11 @@ if (typeof window !== 'undefined') {
 }
 
 function createReporter() {
-  var strip = __webpack_require__(42);
+  var strip = __webpack_require__(43);
 
   var overlay;
   if (typeof document !== 'undefined' && options.overlay) {
-    overlay = __webpack_require__(45);
+    overlay = __webpack_require__(47);
   }
 
   var styles = {
@@ -1377,7 +1377,7 @@ function createReporter() {
   };
 }
 
-var processUpdate = __webpack_require__(46);
+var processUpdate = __webpack_require__(48);
 
 var customHandler;
 var subscribeAllHandler;
@@ -1442,7 +1442,7 @@ if (module) {
   };
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, "?path=__webpack_hmr&dynamicPublicPath=true", __webpack_require__(47)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, "?path=__webpack_hmr&dynamicPublicPath=true", __webpack_require__(49)(module)))
 
 /***/ }),
 /* 12 */
@@ -1652,9 +1652,9 @@ module.exports = function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* unused harmony export getBaseUrl */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_module_shared__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_app_app_component__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_app_app_component__ = __webpack_require__(8);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1696,11 +1696,11 @@ function getBaseUrl() {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModuleShared; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_titles_service__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_router__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_app_app_component__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_app_app_component__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_navmenu_navmenu_component__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_home_home_component__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_watchlist_watchlist_component__ = __webpack_require__(21);
@@ -1766,7 +1766,7 @@ var AppModuleShared = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return createtitle; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_titles_service__ = __webpack_require__(3);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1790,6 +1790,7 @@ var createtitle = (function () {
         this._router = _router;
         this.title = "Create";
         this.processValidation = false;
+        this.visibleTable = false;
         this.allMovies = [];
         if (this._avRoute.snapshot.params["id"]) {
             this.id = this._avRoute.snapshot.params["id"];
@@ -1802,19 +1803,12 @@ var createtitle = (function () {
             id: 0,
             name: ['', [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required]],
             director: ['', [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required]],
-            description: ['', [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required]],
             status: ['', [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required]],
             score: ['', [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required]],
             imdbu: ['', [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required]],
             imdbr: ['', [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required]],
         });
     }
-    //addTitle(elem) {
-    //    this._titlesService.saveTitle(elem)
-    //        .subscribe((data) => {
-    //                this._router.navigate(['/fetch-title']);
-    //            }, error => this.errorMessage = error);
-    // }
     createtitle.prototype.addTitle = function (elem) {
         var _this = this;
         this._titlesService.addTitleFrom(elem)
@@ -1825,6 +1819,7 @@ var createtitle = (function () {
     createtitle.prototype.onTitleFormSubmit = function () {
         var _this = this;
         this.processValidation = true;
+        this.visibleTable = true;
         if (this.searchForm.invalid) {
             return; //Validation failed, exit from method.
         }
@@ -1859,7 +1854,8 @@ var createtitle = (function () {
     createtitle = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'createtitle',
-            template: __webpack_require__(27)
+            template: __webpack_require__(28),
+            styles: [__webpack_require__(44)]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormBuilder"], __WEBPACK_IMPORTED_MODULE_2__angular_router__["ActivatedRoute"],
             __WEBPACK_IMPORTED_MODULE_3__services_titles_service__["a" /* TitlesService */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["Router"]])
@@ -1876,7 +1872,7 @@ var createtitle = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return edittitle; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_titles_service__ = __webpack_require__(3);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1904,13 +1900,8 @@ var edittitle = (function () {
         }
         this.titleForm = this._fb.group({
             id: 0,
-            name: ['', [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required]],
-            director: ['', [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required]],
-            description: ['', [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required]],
             status: ['', [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required]],
             score: ['', [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required]],
-            imdbu: ['', [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required]],
-            imdbr: ['', [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required]],
         });
     }
     edittitle.prototype.ngOnInit = function () {
@@ -1942,21 +1933,6 @@ var edittitle = (function () {
     edittitle.prototype.cancel = function () {
         this._router.navigate(['/fetch-title']);
     };
-    Object.defineProperty(edittitle.prototype, "name", {
-        get: function () { return this.titleForm.get('name'); },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(edittitle.prototype, "director", {
-        get: function () { return this.titleForm.get('director'); },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(edittitle.prototype, "description", {
-        get: function () { return this.titleForm.get('description'); },
-        enumerable: true,
-        configurable: true
-    });
     Object.defineProperty(edittitle.prototype, "status", {
         get: function () { return this.titleForm.get('status'); },
         enumerable: true,
@@ -1967,20 +1943,10 @@ var edittitle = (function () {
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(edittitle.prototype, "imdbu", {
-        get: function () { return this.titleForm.get('imdbu'); },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(edittitle.prototype, "imdbr", {
-        get: function () { return this.titleForm.get('imdbr'); },
-        enumerable: true,
-        configurable: true
-    });
     edittitle = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'edittitle',
-            template: __webpack_require__(29)
+            template: __webpack_require__(30)
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormBuilder"], __WEBPACK_IMPORTED_MODULE_2__angular_router__["ActivatedRoute"],
             __WEBPACK_IMPORTED_MODULE_3__services_titles_service__["a" /* TitlesService */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["Router"]])
@@ -2010,7 +1976,7 @@ var HomeComponent = (function () {
     HomeComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'home',
-            template: __webpack_require__(30)
+            template: __webpack_require__(31)
         })
     ], HomeComponent);
     return HomeComponent;
@@ -2038,8 +2004,8 @@ var NavMenuComponent = (function () {
     NavMenuComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'nav-menu',
-            template: __webpack_require__(31),
-            styles: [__webpack_require__(44)]
+            template: __webpack_require__(32),
+            styles: [__webpack_require__(46)]
         })
     ], NavMenuComponent);
     return NavMenuComponent;
@@ -2054,7 +2020,7 @@ var NavMenuComponent = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WatchlistComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_titles_service__ = __webpack_require__(3);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -2071,17 +2037,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var WatchlistComponent = (function () {
+    //public statuses: any;
     function WatchlistComponent(http, _router, _titlesService) {
         this.http = http;
         this._router = _router;
         this._titlesService = _titlesService;
         this.titleList = [];
+        this.statusOptions = [{ status: 0, name: 'Planned to watch' }, { status: 1, name: 'Watched' }];
         this.getTitles();
     }
     WatchlistComponent.prototype.getTitles = function () {
         var _this = this;
         this._titlesService.getTitles().subscribe(function (data) { return _this.titleList = data; });
     };
+    //OnLoad() {
+    //    this.statuses = new Array(this.titleList.length);
+    //    for (let i = 0; i < this.titleList.length; i++) {
+    //        let newStatus = this.titleList[i].status;
+    //        this.statuses.push(newStatus);
+    //    }
+    //}
     WatchlistComponent.prototype.delete = function (titleID) {
         var _this = this;
         var ans = confirm("Do you want to delete title with Id: " + titleID);
@@ -2091,10 +2066,13 @@ var WatchlistComponent = (function () {
             }, function (error) { return console.error(error); });
         }
     };
+    WatchlistComponent.prototype.statusSelected = function (statusCode, id) {
+        console.log(statusCode + " " + id);
+    };
     WatchlistComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'watchlist',
-            template: __webpack_require__(32)
+            template: __webpack_require__(33)
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"], __WEBPACK_IMPORTED_MODULE_2__angular_router__["Router"], __WEBPACK_IMPORTED_MODULE_3__services_titles_service__["a" /* TitlesService */]])
     ], WatchlistComponent);
@@ -2107,7 +2085,21 @@ var WatchlistComponent = (function () {
 /* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(8)(undefined);
+exports = module.exports = __webpack_require__(5)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "h1 {\r\n    font-size: 2.0em;\r\n    margin: 20px 0 0 0;\r\n    font-weight: 400;\r\n}\r\n\r\nh3 {\r\n    color: blue;\r\n}\r\n\r\ntable {\r\n    border-collapse: collapse;\r\n}\r\n\r\ntable, th, td {\r\n    border: 1px solid black;\r\n    font-size: 17px;\r\n}\r\n\r\ninput {\r\n    width: 225px;\r\n    margin: 8px 0;\r\n    background-color: #dfdfdf;\r\n    font-size: 17px;\r\n}\r\n\r\nbutton {\r\n    background-color: #008CBA;\r\n    color: white;\r\n}\r\n\r\n.error {\r\n    color: red;\r\n    font-size: 20px;\r\n}\r\n\r\n.success {\r\n    color: green;\r\n    font-size: 20px;\r\n}\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(5)(undefined);
 // imports
 
 
@@ -2118,10 +2110,10 @@ exports.push([module.i, "@media (max-width: 767px) {\n    /* On small screens, t
 
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(8)(undefined);
+exports = module.exports = __webpack_require__(5)(undefined);
 // imports
 
 
@@ -2132,19 +2124,19 @@ exports.push([module.i, "li .glyphicon {\n    margin-right: 10px;\n}\n\n/* Highl
 
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
-  XmlEntities: __webpack_require__(26),
-  Html4Entities: __webpack_require__(25),
+  XmlEntities: __webpack_require__(27),
+  Html4Entities: __webpack_require__(26),
   Html5Entities: __webpack_require__(9),
   AllHtmlEntities: __webpack_require__(9)
 };
 
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports) {
 
 var HTML_ALPHA = ['apos', 'nbsp', 'iexcl', 'cent', 'pound', 'curren', 'yen', 'brvbar', 'sect', 'uml', 'copy', 'ordf', 'laquo', 'not', 'shy', 'reg', 'macr', 'deg', 'plusmn', 'sup2', 'sup3', 'acute', 'micro', 'para', 'middot', 'cedil', 'sup1', 'ordm', 'raquo', 'frac14', 'frac12', 'frac34', 'iquest', 'Agrave', 'Aacute', 'Acirc', 'Atilde', 'Auml', 'Aring', 'Aelig', 'Ccedil', 'Egrave', 'Eacute', 'Ecirc', 'Euml', 'Igrave', 'Iacute', 'Icirc', 'Iuml', 'ETH', 'Ntilde', 'Ograve', 'Oacute', 'Ocirc', 'Otilde', 'Ouml', 'times', 'Oslash', 'Ugrave', 'Uacute', 'Ucirc', 'Uuml', 'Yacute', 'THORN', 'szlig', 'agrave', 'aacute', 'acirc', 'atilde', 'auml', 'aring', 'aelig', 'ccedil', 'egrave', 'eacute', 'ecirc', 'euml', 'igrave', 'iacute', 'icirc', 'iuml', 'eth', 'ntilde', 'ograve', 'oacute', 'ocirc', 'otilde', 'ouml', 'divide', 'oslash', 'ugrave', 'uacute', 'ucirc', 'uuml', 'yacute', 'thorn', 'yuml', 'quot', 'amp', 'lt', 'gt', 'OElig', 'oelig', 'Scaron', 'scaron', 'Yuml', 'circ', 'tilde', 'ensp', 'emsp', 'thinsp', 'zwnj', 'zwj', 'lrm', 'rlm', 'ndash', 'mdash', 'lsquo', 'rsquo', 'sbquo', 'ldquo', 'rdquo', 'bdquo', 'dagger', 'Dagger', 'permil', 'lsaquo', 'rsaquo', 'euro', 'fnof', 'Alpha', 'Beta', 'Gamma', 'Delta', 'Epsilon', 'Zeta', 'Eta', 'Theta', 'Iota', 'Kappa', 'Lambda', 'Mu', 'Nu', 'Xi', 'Omicron', 'Pi', 'Rho', 'Sigma', 'Tau', 'Upsilon', 'Phi', 'Chi', 'Psi', 'Omega', 'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta', 'iota', 'kappa', 'lambda', 'mu', 'nu', 'xi', 'omicron', 'pi', 'rho', 'sigmaf', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega', 'thetasym', 'upsih', 'piv', 'bull', 'hellip', 'prime', 'Prime', 'oline', 'frasl', 'weierp', 'image', 'real', 'trade', 'alefsym', 'larr', 'uarr', 'rarr', 'darr', 'harr', 'crarr', 'lArr', 'uArr', 'rArr', 'dArr', 'hArr', 'forall', 'part', 'exist', 'empty', 'nabla', 'isin', 'notin', 'ni', 'prod', 'sum', 'minus', 'lowast', 'radic', 'prop', 'infin', 'ang', 'and', 'or', 'cap', 'cup', 'int', 'there4', 'sim', 'cong', 'asymp', 'ne', 'equiv', 'le', 'ge', 'sub', 'sup', 'nsub', 'sube', 'supe', 'oplus', 'otimes', 'perp', 'sdot', 'lceil', 'rceil', 'lfloor', 'rfloor', 'lang', 'rang', 'loz', 'spades', 'clubs', 'hearts', 'diams'];
@@ -2297,7 +2289,7 @@ module.exports = Html4Entities;
 
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports) {
 
 var ALPHA_INDEX = {
@@ -2458,43 +2450,43 @@ module.exports = XmlEntities;
 
 
 /***/ }),
-/* 27 */
-/***/ (function(module, exports) {
-
-module.exports = "<h1>{{title}}</h1>\r\n<h3>Title</h3>\r\n<hr />\r\n\r\n<ng-template #create>\r\n    <h3> Create New Title </h3>\r\n</ng-template>\r\n<div>\r\n    <form [formGroup]=\"searchForm\" (ngSubmit)=\"onTitleFormSubmit()\">\r\n        <table>\r\n            <tr>\r\n                <td>Enter movie or TV show</td>\r\n                <td>\r\n                    <input formControlName=\"film\">\r\n                    <label *ngIf=\"searchForm.get('film').invalid && processValidation\" [ngClass]=\"'error'\"> Title is required. </label>\r\n                </td>\r\n            </tr>\r\n            <tr>\r\n                <td colspan=\"2\">\r\n                    <button type=\"submit\" class=\"btn btn-default\">Search</button>\r\n                    <button class=\"btn\" (click)=\"cancel()\">Cancel</button>\r\n                </td>\r\n            </tr>\r\n        </table>\r\n    </form>\r\n    <br />\r\n    <div *ngIf=\"statusCode; else processing\">\r\n        <div *ngIf=\"statusCode === 201\" [ngClass]=\"'success'\">\r\n            Title added successfully.\r\n        </div>\r\n        <div *ngIf=\"statusCode === 409\" [ngClass]=\"'success'\">\r\n            Title already exists.\r\n        </div>\r\n        <div *ngIf=\"statusCode === 200\" [ngClass]=\"'success'\">\r\n            Title updated successfully.\r\n        </div>\r\n        <div *ngIf=\"statusCode === 204\" [ngClass]=\"'success'\">\r\n            Title deleted successfully.\r\n        </div>\r\n        <div *ngIf=\"statusCode === 500\" [ngClass]=\"'error'\">\r\n            Internal Server Error.\r\n        </div>\r\n    </div>\r\n</div>\r\n <h3>Title Details</h3>\r\n    <table>\r\n        <tr><th>Movie title</th> <th>Director</th></tr>\r\n        <tr *ngFor=\"let elem of allMovies\">\r\n            <td><a href=\"{{elem.imdbu}}\">{{elem.name}}&nbsp;</a></td>\r\n            <td>{{elem.director}}</td>\r\n            <td><button type=\"button\" (click)=\"addTitle(elem)\">Add</button> </td>\r\n        </tr>\r\n    </table>\r\n\r\n";
-
-/***/ }),
 /* 28 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class='container-fluid'>\n    <div class='row'>\n        <div class='col-sm-3'>\n            <nav-menu></nav-menu>\n        </div>\n        <div class='col-sm-9 body-content'>\n            <router-outlet></router-outlet>\n        </div>\n    </div>\n</div>\n";
+module.exports = "<h1>{{title}}</h1>\r\n<h3>Title</h3>\r\n<hr />\r\n\r\n<ng-template #create>\r\n    <h3> Create New Title </h3>\r\n</ng-template>\r\n<div>\r\n    <form [formGroup]=\"searchForm\" (ngSubmit)=\"onTitleFormSubmit()\">\r\n        <table>\r\n            <tr>\r\n                <td>Enter movie or TV show</td>\r\n                <td>\r\n                    <input formControlName=\"film\">\r\n                    <label *ngIf=\"searchForm.get('film').invalid && processValidation\" [ngClass]=\"'error'\"> Title is required. </label>\r\n                </td>\r\n            </tr>\r\n            <tr>\r\n                <td colspan=\"2\">\r\n                    <button type=\"submit\" class=\"btn btn-default\">Search</button>\r\n                    <button class=\"btn\" (click)=\"cancel()\">Cancel</button>\r\n                </td>\r\n            </tr>\r\n        </table>\r\n    </form>\r\n    <br />\r\n    <div *ngIf=\"statusCode; else processing\">\r\n        <div *ngIf=\"statusCode === 201\" [ngClass]=\"'success'\">\r\n            Title added successfully.\r\n        </div>\r\n        <div *ngIf=\"statusCode === 409\" [ngClass]=\"'success'\">\r\n            Title already exists.\r\n        </div>\r\n        <div *ngIf=\"statusCode === 200\" [ngClass]=\"'success'\">\r\n            Title updated successfully.\r\n        </div>\r\n        <div *ngIf=\"statusCode === 204\" [ngClass]=\"'success'\">\r\n            Title deleted successfully.\r\n        </div>\r\n        <div *ngIf=\"statusCode === 500\" [ngClass]=\"'error'\">\r\n            Internal Server Error.\r\n        </div>\r\n    </div>\r\n</div>\r\n<div *ngIf=\"visibleTable\">\r\n    <h3>Title Details</h3>\r\n    <table>\r\n        <tr><th>Movie title</th> <th>Director</th></tr>\r\n        <tr *ngFor=\"let elem of allMovies\">\r\n            <td><a href=\"{{elem.imdbu}}\">{{elem.name}}&nbsp;</a></td>\r\n            <td>{{elem.director}}</td>\r\n            <td><button type=\"button\" (click)=\"addTitle(elem)\">Add</button> </td>\r\n        </tr>\r\n    </table>\r\n</div>\r\n\r\n";
 
 /***/ }),
 /* 29 */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>{{title}}</h1>\r\n<h3>Title Edit</h3>\r\n<hr />\r\n\r\n<form [formGroup]=\"titleForm\" (ngSubmit)=\"save()\" #formDir=\"ngForm\" novalidate>\r\n\r\n    <div class=\"form-group row\">\r\n        <label class=\" control-label col-md-12\" for=\"Name\">Title</label>\r\n        <div class=\"col-md-4\">\r\n            <input class=\"form-control\" type=\"text\" formControlName=\"name\">\r\n        </div>\r\n        <span class=\"text-danger\" *ngIf=\"name.invalid && formDir.submitted\">\r\n            Name is required.\r\n        </span>\r\n    </div>\r\n    <div class=\"form-group row\">\r\n        <label class=\" control-label col-md-12\" for=\"Description\">Description</label>\r\n        <div class=\"col-md-4\">\r\n            <input class=\"form-control\" type=\"text\" formControlName=\"description\">\r\n        </div>\r\n        <span class=\"text-danger\" *ngIf=\"description.invalid && formDir.submitted\">\r\n            Description is required.\r\n        </span>\r\n    </div>\r\n    <div class=\"form-group row\">\r\n        <label class=\"control-label col-md-12\" for=\"Director\">Director</label>\r\n        <div class=\"col-md-4\">\r\n            <input class=\"form-control\" type=\"text\" formControlName=\"director\">\r\n        </div>\r\n        <span class=\"text-danger\" *ngIf=\"director.invalid && formDir.submitted\">\r\n            Director is required\r\n        </span>\r\n    </div>\r\n    <div class=\"form-group row\">\r\n        <label class=\"control-label col-md-12\" for=\"Status\">Status</label>\r\n        <div class=\"col-md-4\">\r\n            <select class=\"form-control\" data-val=\"\" formControlName=\"status\">\r\n                <option value=\"\">-- Select Status --</option>\r\n                <option value=0>Planned to watch</option>\r\n                <option value=1>Watched</option>\r\n            </select>\r\n        </div>\r\n        <span class=\"text-danger\" *ngIf=\"status.invalid && formDir.submitted\">\r\n            Status is required\r\n        </span>\r\n    </div>\r\n    <div class=\"form-group row\">\r\n        <label class=\"control-label col-md-12\" for=\"Score\">UserScore</label>\r\n        <div class=\"col-md-4\">\r\n            <input class=\"form-control\" type=\"text\" formControlName=\"score\">\r\n        </div>\r\n        <span class=\"text-danger\" *ngIf=\"score.invalid && formDir.submitted\">\r\n            UserScore is required\r\n        </span>\r\n    </div>\r\n    <div class=\"form-group row\">\r\n        <label class=\"control-label col-md-12\" for=\"IMDBU\">IMDB_Url</label>\r\n        <div class=\"col-md-4\">\r\n            <input class=\"form-control\" type=\"text\" formControlName=\"imdbu\">\r\n        </div>\r\n        <span class=\"text-danger\" *ngIf=\"imdbu.invalid && formDir.submitted\">\r\n            IMDBU is required\r\n        </span>\r\n    </div>\r\n    <div class=\"form-group row\">\r\n        <label class=\"control-label col-md-12\"  for=\"IMDBR\">IMDB_UsersRating</label>\r\n        <div class=\"col-md-4\">\r\n            <input class=\"form-control\" type=\"text\" formControlName=\"imdbr\">\r\n        </div>\r\n        <span class=\"text-danger\" *ngIf=\"imdbr.invalid && formDir.submitted\">\r\n            IMDBR is required\r\n        </span>\r\n    </div>\r\n    \r\n    <div class=\"form-group\">\r\n        <button type=\"submit\" class=\"btn btn-default\">Save</button>\r\n        <button class=\"btn\" (click)=\"cancel()\">Cancel</button>\r\n    </div>\r\n</form>\r\n\r\n";
+module.exports = "<div class='container-fluid'>\n    <div class='row'>\n        <div class='col-sm-3'>\n            <nav-menu></nav-menu>\n        </div>\n        <div class='col-sm-9 body-content'>\n            <router-outlet></router-outlet>\n        </div>\n    </div>\n</div>\n";
 
 /***/ }),
 /* 30 */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Hello, world!</h1>\n<p>Welcome to your new single-page application, built with:</p>\n<ul>\n    <li><a href='https://get.asp.net/'>ASP.NET Core</a> and <a href='https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx'>C#</a> for cross-platform server-side code</li>\n    <li><a href='https://angular.io/'>Angular</a> and <a href='http://www.typescriptlang.org/'>TypeScript</a> for client-side code</li>\n    <li><a href='https://webpack.github.io/'>Webpack</a> for building and bundling client-side resources</li>\n    <li><a href='http://getbootstrap.com/'>Bootstrap</a> for layout and styling</li>\n</ul>\n<p>To help you get started, we've also set up:</p>\n<ul>\n    <li><strong>Client-side navigation</strong>. For example, click <em>Counter</em> then <em>Back</em> to return here.</li>\n    <li><strong>Server-side prerendering</strong>. For faster initial loading and improved SEO, your Angular app is prerendered on the server. The resulting HTML is then transferred to the browser where a client-side copy of the app takes over.</li>\n    <li><strong>Webpack dev middleware</strong>. In development mode, there's no need to run the <code>webpack</code> build tool. Your client-side resources are dynamically built on demand. Updates are available as soon as you modify any file.</li>\n    <li><strong>Hot module replacement</strong>. In development mode, you don't even need to reload the page after making most changes. Within seconds of saving changes to files, your Angular app will be rebuilt and a new instance injected is into the page.</li>\n    <li><strong>Efficient production builds</strong>. In production mode, development-time features are disabled, and the <code>webpack</code> build tool produces minified static CSS and JavaScript files.</li>\n</ul>\n";
+module.exports = "<h1>{{title}}</h1>\r\n<h3>Title Edit</h3>\r\n<hr />\r\n\r\n<form [formGroup]=\"titleForm\" (ngSubmit)=\"save()\" #formDir=\"ngForm\" novalidate>\r\n\r\n    \r\n    <div class=\"form-group row\">\r\n        <label class=\"control-label col-md-12\" for=\"Status\">Status</label>\r\n        <div class=\"col-md-4\">\r\n            <select class=\"form-control\" data-val=\"\" formControlName=\"status\">\r\n                <option value=\"\">-- Select Status --</option>\r\n                <option value=0>Planned to watch</option>\r\n                <option value=1>Watched</option>\r\n            </select>\r\n        </div>\r\n        <span class=\"text-danger\" *ngIf=\"status.invalid && formDir.submitted\">\r\n            Status is required\r\n        </span>\r\n    </div>\r\n    <div class=\"form-group row\">\r\n        <label class=\"control-label col-md-12\" for=\"Score\">UserScore</label>\r\n        <div class=\"col-md-4\">\r\n            <input class=\"form-control\" type=\"text\" formControlName=\"score\">\r\n        </div>\r\n        <span class=\"text-danger\" *ngIf=\"score.invalid && formDir.submitted\">\r\n            UserScore is required\r\n        </span>\r\n    </div>\r\n    \r\n    <div class=\"form-group\">\r\n        <button type=\"submit\" class=\"btn btn-default\">Save</button>\r\n        <button class=\"btn\" (click)=\"cancel()\">Cancel</button>\r\n    </div>\r\n</form>\r\n\r\n";
 
 /***/ }),
 /* 31 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class='main-nav'>\n    <div class='navbar navbar-inverse'>\n        <div class='navbar-header'>\n            <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>\n                <span class='sr-only'>Toggle navigation</span>\n                <span class='icon-bar'></span>\n                <span class='icon-bar'></span>\n                <span class='icon-bar'></span>\n            </button>\n            <a class='navbar-brand' [routerLink]=\"['/home']\">ASPCoreWithAngular</a>\n        </div>\n        <div class='clearfix'></div>\n        <div class='navbar-collapse collapse'>\n            <ul class='nav navbar-nav'>\n                <li [routerLinkActive]=\"['link-active']\">\n                    <a [routerLink]=\"['/home']\">\n                        <span class='glyphicon glyphicon-home'></span> Home\n                    </a>\n                </li>\n                <li [routerLinkActive]=\"['link-active']\">\n                    <a [routerLink]=\"['/fetch-title']\">\n                        <span class='glyphicon glyphicon-th-list'></span> Watchlist\n                    </a>\n                </li>\n            </ul>\n        </div>\n    </div>\n</div>\n";
+module.exports = "<h1>Hello, world!</h1>\n<p>Welcome to your new single-page application, built with:</p>\n<ul>\n    <li><a href='https://get.asp.net/'>ASP.NET Core</a> and <a href='https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx'>C#</a> for cross-platform server-side code</li>\n    <li><a href='https://angular.io/'>Angular</a> and <a href='http://www.typescriptlang.org/'>TypeScript</a> for client-side code</li>\n    <li><a href='https://webpack.github.io/'>Webpack</a> for building and bundling client-side resources</li>\n    <li><a href='http://getbootstrap.com/'>Bootstrap</a> for layout and styling</li>\n</ul>\n<p>To help you get started, we've also set up:</p>\n<ul>\n    <li><strong>Client-side navigation</strong>. For example, click <em>Counter</em> then <em>Back</em> to return here.</li>\n    <li><strong>Server-side prerendering</strong>. For faster initial loading and improved SEO, your Angular app is prerendered on the server. The resulting HTML is then transferred to the browser where a client-side copy of the app takes over.</li>\n    <li><strong>Webpack dev middleware</strong>. In development mode, there's no need to run the <code>webpack</code> build tool. Your client-side resources are dynamically built on demand. Updates are available as soon as you modify any file.</li>\n    <li><strong>Hot module replacement</strong>. In development mode, you don't even need to reload the page after making most changes. Within seconds of saving changes to files, your Angular app will be rebuilt and a new instance injected is into the page.</li>\n    <li><strong>Efficient production builds</strong>. In production mode, development-time features are disabled, and the <code>webpack</code> build tool produces minified static CSS and JavaScript files.</li>\n</ul>\n";
 
 /***/ }),
 /* 32 */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Watchlist</h1>\r\n\r\n<p>This is your watchlist.</p>\r\n\r\n<p *ngIf=\"!titleList\"><em>Loading...</em></p>\r\n\r\n<p>\r\n    <a [routerLink]=\"['/register-title']\">Create New</a>\r\n</p>\r\n\r\n<table class='table' *ngIf=\"titleList\">\r\n    <thead>\r\n        <tr>\r\n            <th>Id</th>\r\n            <th>Title</th>\r\n            <th>Director</th>\r\n            <th>Description</th>\r\n            <th>Status</th>\r\n            <th>Score</th>\r\n            <th>IMDB_Url</th>\r\n            <th>IMDB_UserRating</th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr *ngFor=\"let elem of titleList\">\r\n            <td>{{ elem.id }}</td>\r\n            <td>{{ elem.name }}</td>\r\n            <td>{{ elem.director }}</td>\r\n            <td>{{ elem.description }}</td>\r\n            <td align=\"center\">\r\n                <select name={{elem.status}}>\r\n                    <option value=0>Planned to watch</option>\r\n                    <option value=1>Watched</option>\r\n                </select>\r\n            </td>\r\n            <td>{{ elem.score }}</td>\r\n            <td>{{ elem.imdbu }}</td>\r\n            <td>{{ elem.imdbr }}</td>\r\n            <td>\r\n            <td>\r\n                <a [routerLink]=\"['/watchlist/edit/', elem.id]\">Edit</a> |\r\n                <a [routerLink]=\"\" (click)=\"delete(elem.id)\">Delete</a>\r\n            </td>\r\n        </tr>\r\n    </tbody>\r\n</table>";
+module.exports = "<div class='main-nav'>\n    <div class='navbar navbar-inverse'>\n        <div class='navbar-header'>\n            <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>\n                <span class='sr-only'>Toggle navigation</span>\n                <span class='icon-bar'></span>\n                <span class='icon-bar'></span>\n                <span class='icon-bar'></span>\n            </button>\n            <a class='navbar-brand' [routerLink]=\"['/home']\">ASPCoreWithAngular</a>\n        </div>\n        <div class='clearfix'></div>\n        <div class='navbar-collapse collapse'>\n            <ul class='nav navbar-nav'>\n                <li [routerLinkActive]=\"['link-active']\">\n                    <a [routerLink]=\"['/home']\">\n                        <span class='glyphicon glyphicon-home'></span> Home\n                    </a>\n                </li>\n                <li [routerLinkActive]=\"['link-active']\">\n                    <a [routerLink]=\"['/fetch-title']\">\n                        <span class='glyphicon glyphicon-th-list'></span> Watchlist\n                    </a>\n                </li>\n            </ul>\n        </div>\n    </div>\n</div>\n";
 
 /***/ }),
 /* 33 */
+/***/ (function(module, exports) {
+
+module.exports = "<h1>Watchlist</h1>\r\n\r\n<p>This is your watchlist.</p>\r\n\r\n<p *ngIf=\"!titleList\"><em>Loading...</em></p>\r\n\r\n<p>\r\n    <a [routerLink]=\"['/register-title']\">Create New</a>\r\n</p>\r\n\r\n<table class='table' *ngIf=\"titleList\">\r\n    <thead>\r\n        <tr>\r\n            <th>#</th>\r\n            <th>Title</th>\r\n            <th>Director</th>\r\n            <th>Status</th>\r\n            <th>Score</th>\r\n            <th>Rating</th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr *ngFor=\"let elem of titleList\">\r\n            <td>{{ elem.id }}</td>\r\n            <td><a href=\"{{elem.imdbu}}\">{{elem.name}}&nbsp;</a></td>\r\n            <td>{{ elem.director }}</td>\r\n            <td align=\"center\">\r\n                <select [(ngModel)]=\"titleList[elem.id]\" (ngModelChange)=\"statusSelected(statuses[elem.id], elem.id)\">\r\n                    <option *ngFor=\"let c of statusOptions\" [ngValue]=\"c.status\">{{c.name}}</option>\r\n                </select>\r\n            </td>\r\n            <td>{{ elem.score }}</td>\r\n            <td>{{ elem.imdbr }}</td>\r\n            <td>\r\n            <td>\r\n                <a [routerLink]=\"['/watchlist/edit/', elem.id]\">Edit</a> |\r\n                <a [routerLink]=\"\" (click)=\"delete(elem.id)\">Delete</a>\r\n            </td>\r\n        </tr>\r\n    </tbody>\r\n</table>";
+
+/***/ }),
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2585,7 +2577,7 @@ var isArray = Array.isArray || function (xs) {
 
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2677,18 +2669,18 @@ var objectKeys = Object.keys || function (obj) {
 
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-exports.decode = exports.parse = __webpack_require__(33);
-exports.encode = exports.stringify = __webpack_require__(34);
+exports.decode = exports.parse = __webpack_require__(34);
+exports.encode = exports.stringify = __webpack_require__(35);
 
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process, global) {/*! *****************************************************************************
@@ -3816,18 +3808,7 @@ var Reflect;
             Function("return this;")());
 })(Reflect || (Reflect = {}));
 //# sourceMappingURL=Reflect.js.map
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(48), __webpack_require__(55)))
-
-/***/ }),
-/* 37 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var Observable_1 = __webpack_require__(2);
-var throw_1 = __webpack_require__(41);
-Observable_1.Observable.throw = throw_1._throw;
-//# sourceMappingURL=throw.js.map
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(50), __webpack_require__(57)))
 
 /***/ }),
 /* 38 */
@@ -3836,10 +3817,9 @@ Observable_1.Observable.throw = throw_1._throw;
 "use strict";
 
 var Observable_1 = __webpack_require__(2);
-var catch_1 = __webpack_require__(54);
-Observable_1.Observable.prototype.catch = catch_1._catch;
-Observable_1.Observable.prototype._catch = catch_1._catch;
-//# sourceMappingURL=catch.js.map
+var throw_1 = __webpack_require__(42);
+Observable_1.Observable.throw = throw_1._throw;
+//# sourceMappingURL=throw.js.map
 
 /***/ }),
 /* 39 */
@@ -3848,12 +3828,24 @@ Observable_1.Observable.prototype._catch = catch_1._catch;
 "use strict";
 
 var Observable_1 = __webpack_require__(2);
-var map_1 = __webpack_require__(49);
+var catch_1 = __webpack_require__(56);
+Observable_1.Observable.prototype.catch = catch_1._catch;
+Observable_1.Observable.prototype._catch = catch_1._catch;
+//# sourceMappingURL=catch.js.map
+
+/***/ }),
+/* 40 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var Observable_1 = __webpack_require__(2);
+var map_1 = __webpack_require__(51);
 Observable_1.Observable.prototype.map = map_1.map;
 //# sourceMappingURL=map.js.map
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3942,17 +3934,17 @@ exports.ErrorObservable = ErrorObservable;
 //# sourceMappingURL=ErrorObservable.js.map
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var ErrorObservable_1 = __webpack_require__(40);
+var ErrorObservable_1 = __webpack_require__(41);
 exports._throw = ErrorObservable_1.ErrorObservable.create;
 //# sourceMappingURL=throw.js.map
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3965,7 +3957,7 @@ module.exports = function (str) {
 
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -3979,7 +3971,7 @@ module.exports = function (str) {
     
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -3993,7 +3985,21 @@ module.exports = function (str) {
     
 
 /***/ }),
-/* 45 */
+/* 46 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+        var result = __webpack_require__(24);
+
+        if (typeof result === "string") {
+            module.exports = result;
+        } else {
+            module.exports = result.toString();
+        }
+    
+
+/***/ }),
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*eslint-env browser*/
@@ -4037,7 +4043,7 @@ var colors = {
 };
 ansiHTML.setColors(colors);
 
-var Entities = __webpack_require__(24).AllHtmlEntities;
+var Entities = __webpack_require__(25).AllHtmlEntities;
 var entities = new Entities();
 
 exports.showProblems =
@@ -4078,7 +4084,7 @@ function problemType (type) {
 
 
 /***/ }),
-/* 46 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -4216,7 +4222,7 @@ module.exports = function(hash, moduleMap, options) {
 
 
 /***/ }),
-/* 47 */
+/* 49 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -4244,61 +4250,61 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 48 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(0))(23);
 
 /***/ }),
-/* 49 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(0))(28);
 
 /***/ }),
-/* 50 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(0))(40);
 
 /***/ }),
-/* 51 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(0))(42);
 
 /***/ }),
-/* 52 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(0))(47);
 
 /***/ }),
-/* 53 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(0))(6);
 
 /***/ }),
-/* 54 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(0))(73);
 
 /***/ }),
-/* 55 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(0))(8);
 
 /***/ }),
-/* 56 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(0))(9);
 
 /***/ }),
-/* 57 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(12);

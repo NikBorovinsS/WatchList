@@ -42,7 +42,8 @@
         </div>
     </div>
 </div>
- <h3>Title Details</h3>
+<div *ngIf="visibleTable">
+    <h3>Title Details</h3>
     <table>
         <tr><th>Movie title</th> <th>Director</th></tr>
         <tr *ngFor="let elem of allMovies">
@@ -51,4 +52,5 @@
             <td><button type="button" (click)="addTitle(elem)">Add</button> </td>
         </tr>
     </table>
+</div>
 

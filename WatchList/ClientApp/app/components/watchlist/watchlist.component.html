@@ -11,30 +11,25 @@
 <table class='table' *ngIf="titleList">
     <thead>
         <tr>
-            <th>Id</th>
+            <th>#</th>
             <th>Title</th>
             <th>Director</th>
-            <th>Description</th>
             <th>Status</th>
             <th>Score</th>
-            <th>IMDB_Url</th>
-            <th>IMDB_UserRating</th>
+            <th>Rating</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let elem of titleList">
             <td>{{ elem.id }}</td>
-            <td>{{ elem.name }}</td>
+            <td><a href="{{elem.imdbu}}">{{elem.name}}&nbsp;</a></td>
             <td>{{ elem.director }}</td>
-            <td>{{ elem.description }}</td>
             <td align="center">
-                <select name={{elem.status}}>
-                    <option value=0>Planned to watch</option>
-                    <option value=1>Watched</option>
+                <select [(ngModel)]="titleList[elem.id]" (ngModelChange)="statusSelected(statuses[elem.id], elem.id)">
+                    <option *ngFor="let c of statusOptions" [ngValue]="c.status">{{c.name}}</option>
                 </select>
             </td>
             <td>{{ elem.score }}</td>
-            <td>{{ elem.imdbu }}</td>
             <td>{{ elem.imdbr }}</td>
             <td>
             <td>
