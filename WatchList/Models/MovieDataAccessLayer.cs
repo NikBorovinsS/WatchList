@@ -189,6 +189,7 @@ namespace WatchList.Models
                 throw;
             }
         }
+        
 
         public Movie GetTitleData(int id)
         {

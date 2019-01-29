@@ -25,8 +25,9 @@
             <td><a href="{{elem.imdbu}}">{{elem.name}}&nbsp;</a></td>
             <td>{{ elem.director }}</td>
             <td align="center">
-                <select [(ngModel)]="titleList[elem.id]" (ngModelChange)="statusSelected(statuses[elem.id], elem.id)">
-                    <option *ngFor="let c of statusOptions" [ngValue]="c.status">{{c.name}}</option>
+                <select [ngModel]="elem.status" id="{{elem.id}}" (ngModelChange)="OnStatusChange(elem, $event)">
+                    <option [ngValue]=0>Planned to watch</option>
+                    <option [ngValue]=1>Watched</option>
                 </select>
             </td>
             <td>{{ elem.score }}</td>

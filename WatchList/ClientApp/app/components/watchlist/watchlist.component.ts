@@ -1,21 +1,25 @@
-﻿import { Component, Inject } from '@angular/core';
+﻿import { Component, Inject, OnInit } from '@angular/core';
 import { Http, Headers } from '@angular/http';
 import { Router, ActivatedRoute, Event } from '@angular/router';
 import { TitlesService } from '../../services/titles.service';
+import { FormGroup } from '@angular/forms';
 
 @Component({
     selector: 'watchlist',
     templateUrl: './watchlist.component.html'
 })
 
-export class WatchlistComponent {
+export class WatchlistComponent{
     public titleList: TitleData[] = [];
+    selectedvalue = null;
     public statusOptions: statusData[] = [{ status: 0, name: 'Planned to watch' }, { status: 1, name: 'Watched' }];
-    //public statuses: any;
+    public statuses: any;
 
     constructor(public http: Http, private _router: Router, private _titlesService: TitlesService) {
+
         this.getTitles();
     }
+
     getTitles() {
         this._titlesService.getTitles().subscribe(
             data => this.titleList = data
@@ -30,6 +34,25 @@ export class WatchlistComponent {
     //    }
     //}
 
+    OnStatusChange(elem: any, newStatus:number) {
+        
+        console.log("Itsalive");
+
+        elem.status = newStatus;
+
+        this._titlesService.updateTitle(elem)
+            .subscribe((data) => {
+                this._router.navigate(['/fetch-title']);
+            }, error => console.error(error))
+
+        //let args: string = id.toString() + newStatus.toString();
+
+        //this._titlesService.updateStatus(args)
+        //    .subscribe((data) => {
+        //        this._router.navigate(['/fetch-title']);
+        //    }, error => console.error(error));
+    }
+
     delete(titleID) {
         var ans = confirm("Do you want to delete title with Id: " + titleID);
         if (ans) {
@@ -37,9 +60,6 @@ export class WatchlistComponent {
                 this.getTitles();
             }, error => console.error(error)) 
         }
-    }
-    statusSelected(statusCode: number, id: number) {
-        console.log(statusCode + " " + id);
     }
 }
 interface TitleData {
@@ -60,7 +80,4 @@ interface TitleData {
 interface statusData {
     status: number;
     name: string;
-}
-interface UIElement {
-    addLoadListener(onload: (this: void, e: Event) => void): void;
 }

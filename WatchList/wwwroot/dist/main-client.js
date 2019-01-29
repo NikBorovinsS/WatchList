@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "a6c62368b3be282c6ae7"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "28a89c13c552c90efbb5"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -786,13 +786,15 @@ var TitlesService = (function () {
             .catch(this.errorHandler);
     };
     TitlesService.prototype.addTitleFrom = function (elem) {
-        var _this = this;
         return this._http.post(this.myAppUrl + "api/WatchList/AddTitleFrom", elem)
             .map(function (response) {
-            console.log(response.json());
-            console.log(_this.myAppUrl + "api/WatchList/AddTitleFrom");
             response.json();
         })
+            .catch(this.errorHandler);
+    };
+    TitlesService.prototype.updateStatus = function (args) {
+        return this._http.get(this.myAppUrl + 'api/WatchList/UpdateStatus', args)
+            .map(function (success) { return success.status; })
             .catch(this.errorHandler);
     };
     TitlesService.prototype.updateTitle = function (title) {
@@ -2037,12 +2039,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var WatchlistComponent = (function () {
-    //public statuses: any;
     function WatchlistComponent(http, _router, _titlesService) {
         this.http = http;
         this._router = _router;
         this._titlesService = _titlesService;
         this.titleList = [];
+        this.selectedvalue = null;
         this.statusOptions = [{ status: 0, name: 'Planned to watch' }, { status: 1, name: 'Watched' }];
         this.getTitles();
     }
@@ -2057,6 +2059,20 @@ var WatchlistComponent = (function () {
     //        this.statuses.push(newStatus);
     //    }
     //}
+    WatchlistComponent.prototype.OnStatusChange = function (elem, newStatus) {
+        var _this = this;
+        console.log("Itsalive");
+        elem.status = newStatus;
+        this._titlesService.updateTitle(elem)
+            .subscribe(function (data) {
+            _this._router.navigate(['/fetch-title']);
+        }, function (error) { return console.error(error); });
+        //let args: string = id.toString() + newStatus.toString();
+        //this._titlesService.updateStatus(args)
+        //    .subscribe((data) => {
+        //        this._router.navigate(['/fetch-title']);
+        //    }, error => console.error(error));
+    };
     WatchlistComponent.prototype.delete = function (titleID) {
         var _this = this;
         var ans = confirm("Do you want to delete title with Id: " + titleID);
@@ -2065,9 +2081,6 @@ var WatchlistComponent = (function () {
                 _this.getTitles();
             }, function (error) { return console.error(error); });
         }
-    };
-    WatchlistComponent.prototype.statusSelected = function (statusCode, id) {
-        console.log(statusCode + " " + id);
     };
     WatchlistComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -2483,7 +2496,7 @@ module.exports = "<div class='main-nav'>\n    <div class='navbar navbar-inverse'
 /* 33 */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Watchlist</h1>\r\n\r\n<p>This is your watchlist.</p>\r\n\r\n<p *ngIf=\"!titleList\"><em>Loading...</em></p>\r\n\r\n<p>\r\n    <a [routerLink]=\"['/register-title']\">Create New</a>\r\n</p>\r\n\r\n<table class='table' *ngIf=\"titleList\">\r\n    <thead>\r\n        <tr>\r\n            <th>#</th>\r\n            <th>Title</th>\r\n            <th>Director</th>\r\n            <th>Status</th>\r\n            <th>Score</th>\r\n            <th>Rating</th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr *ngFor=\"let elem of titleList\">\r\n            <td>{{ elem.id }}</td>\r\n            <td><a href=\"{{elem.imdbu}}\">{{elem.name}}&nbsp;</a></td>\r\n            <td>{{ elem.director }}</td>\r\n            <td align=\"center\">\r\n                <select [(ngModel)]=\"titleList[elem.id]\" (ngModelChange)=\"statusSelected(statuses[elem.id], elem.id)\">\r\n                    <option *ngFor=\"let c of statusOptions\" [ngValue]=\"c.status\">{{c.name}}</option>\r\n                </select>\r\n            </td>\r\n            <td>{{ elem.score }}</td>\r\n            <td>{{ elem.imdbr }}</td>\r\n            <td>\r\n            <td>\r\n                <a [routerLink]=\"['/watchlist/edit/', elem.id]\">Edit</a> |\r\n                <a [routerLink]=\"\" (click)=\"delete(elem.id)\">Delete</a>\r\n            </td>\r\n        </tr>\r\n    </tbody>\r\n</table>";
+module.exports = "<h1>Watchlist</h1>\r\n\r\n<p>This is your watchlist.</p>\r\n\r\n<p *ngIf=\"!titleList\"><em>Loading...</em></p>\r\n\r\n<p>\r\n    <a [routerLink]=\"['/register-title']\">Create New</a>\r\n</p>\r\n\r\n<table class='table' *ngIf=\"titleList\">\r\n    <thead>\r\n        <tr>\r\n            <th>#</th>\r\n            <th>Title</th>\r\n            <th>Director</th>\r\n            <th>Status</th>\r\n            <th>Score</th>\r\n            <th>Rating</th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr *ngFor=\"let elem of titleList\">\r\n            <td>{{ elem.id }}</td>\r\n            <td><a href=\"{{elem.imdbu}}\">{{elem.name}}&nbsp;</a></td>\r\n            <td>{{ elem.director }}</td>\r\n            <td align=\"center\">\r\n                <select [ngModel]=\"elem.status\" id=\"{{elem.id}}\" (ngModelChange)=\"OnStatusChange(elem, $event)\">\r\n                    <option [ngValue]=0>Planned to watch</option>\r\n                    <option [ngValue]=1>Watched</option>\r\n                </select>\r\n            </td>\r\n            <td>{{ elem.score }}</td>\r\n            <td>{{ elem.imdbr }}</td>\r\n            <td>\r\n            <td>\r\n                <a [routerLink]=\"['/watchlist/edit/', elem.id]\">Edit</a> |\r\n                <a [routerLink]=\"\" (click)=\"delete(elem.id)\">Delete</a>\r\n            </td>\r\n        </tr>\r\n    </tbody>\r\n</table>";
 
 /***/ }),
 /* 34 */

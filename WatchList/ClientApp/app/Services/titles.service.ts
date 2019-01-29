@@ -41,8 +41,6 @@ export class TitlesService {
     addTitleFrom(elem) {
         return this._http.post(this.myAppUrl + "api/WatchList/AddTitleFrom",elem)
             .map((response: Response) => {
-                console.log(response.json());
-                console.log(this.myAppUrl + "api/WatchList/AddTitleFrom" );
                 response.json();
             })
            .catch(this.errorHandler)
