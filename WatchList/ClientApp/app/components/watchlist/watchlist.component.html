@@ -25,7 +25,7 @@
             <td><a href="{{elem.imdbu}}">{{elem.name}}&nbsp;</a></td>
             <td>{{ elem.director }}</td>
             <td align="center">
-                <select [ngModel]="elem.status" id="{{elem.id}}" (ngModelChange)="OnStatusChange(elem, $event)">
+                <select [ngModel]="elem.status" (ngModelChange)="OnStatusChange(elem, $event)">
                     <option [ngValue]=0>Planned to watch</option>
                     <option [ngValue]=1>Watched</option>
                 </select>

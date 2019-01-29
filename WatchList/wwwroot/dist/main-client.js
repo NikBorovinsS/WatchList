@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "28a89c13c552c90efbb5"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "860e5313aac89b301896"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -790,11 +790,6 @@ var TitlesService = (function () {
             .map(function (response) {
             response.json();
         })
-            .catch(this.errorHandler);
-    };
-    TitlesService.prototype.updateStatus = function (args) {
-        return this._http.get(this.myAppUrl + 'api/WatchList/UpdateStatus', args)
-            .map(function (success) { return success.status; })
             .catch(this.errorHandler);
     };
     TitlesService.prototype.updateTitle = function (title) {
@@ -2466,7 +2461,7 @@ module.exports = XmlEntities;
 /* 28 */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>{{title}}</h1>\r\n<h3>Title</h3>\r\n<hr />\r\n\r\n<ng-template #create>\r\n    <h3> Create New Title </h3>\r\n</ng-template>\r\n<div>\r\n    <form [formGroup]=\"searchForm\" (ngSubmit)=\"onTitleFormSubmit()\">\r\n        <table>\r\n            <tr>\r\n                <td>Enter movie or TV show</td>\r\n                <td>\r\n                    <input formControlName=\"film\">\r\n                    <label *ngIf=\"searchForm.get('film').invalid && processValidation\" [ngClass]=\"'error'\"> Title is required. </label>\r\n                </td>\r\n            </tr>\r\n            <tr>\r\n                <td colspan=\"2\">\r\n                    <button type=\"submit\" class=\"btn btn-default\">Search</button>\r\n                    <button class=\"btn\" (click)=\"cancel()\">Cancel</button>\r\n                </td>\r\n            </tr>\r\n        </table>\r\n    </form>\r\n    <br />\r\n    <div *ngIf=\"statusCode; else processing\">\r\n        <div *ngIf=\"statusCode === 201\" [ngClass]=\"'success'\">\r\n            Title added successfully.\r\n        </div>\r\n        <div *ngIf=\"statusCode === 409\" [ngClass]=\"'success'\">\r\n            Title already exists.\r\n        </div>\r\n        <div *ngIf=\"statusCode === 200\" [ngClass]=\"'success'\">\r\n            Title updated successfully.\r\n        </div>\r\n        <div *ngIf=\"statusCode === 204\" [ngClass]=\"'success'\">\r\n            Title deleted successfully.\r\n        </div>\r\n        <div *ngIf=\"statusCode === 500\" [ngClass]=\"'error'\">\r\n            Internal Server Error.\r\n        </div>\r\n    </div>\r\n</div>\r\n<div *ngIf=\"visibleTable\">\r\n    <h3>Title Details</h3>\r\n    <table>\r\n        <tr><th>Movie title</th> <th>Director</th></tr>\r\n        <tr *ngFor=\"let elem of allMovies\">\r\n            <td><a href=\"{{elem.imdbu}}\">{{elem.name}}&nbsp;</a></td>\r\n            <td>{{elem.director}}</td>\r\n            <td><button type=\"button\" (click)=\"addTitle(elem)\">Add</button> </td>\r\n        </tr>\r\n    </table>\r\n</div>\r\n\r\n";
+module.exports = "<h1>{{title}}</h1>\r\n<h3>Title</h3>\r\n<hr />\r\n\r\n<ng-template #create>\r\n    <h3> Create New Title </h3>\r\n</ng-template>\r\n<div>\r\n    <form [formGroup]=\"searchForm\" (ngSubmit)=\"onTitleFormSubmit()\">\r\n        <table>\r\n            <tr>\r\n                <td>Enter movie or TV show</td>\r\n                <td>\r\n                    <input formControlName=\"film\">\r\n                    <label *ngIf=\"searchForm.get('film').invalid && processValidation\" [ngClass]=\"'error'\"> Title is required. </label>\r\n                </td>\r\n            </tr>\r\n            <tr>\r\n                <td colspan=\"2\">\r\n                    <button *ngIf = \"!visibleTable\" type=\"submit\" class=\"btn btn-default\">Search</button>\r\n                    <button class=\"btn\" (click)=\"cancel()\">Cancel</button>\r\n                </td>\r\n            </tr>\r\n        </table>\r\n    </form>\r\n    <br />\r\n    <div *ngIf=\"statusCode; else processing\">\r\n        <div *ngIf=\"statusCode === 201\" [ngClass]=\"'success'\">\r\n            Title added successfully.\r\n        </div>\r\n        <div *ngIf=\"statusCode === 409\" [ngClass]=\"'success'\">\r\n            Title already exists.\r\n        </div>\r\n        <div *ngIf=\"statusCode === 200\" [ngClass]=\"'success'\">\r\n            Title updated successfully.\r\n        </div>\r\n        <div *ngIf=\"statusCode === 204\" [ngClass]=\"'success'\">\r\n            Title deleted successfully.\r\n        </div>\r\n        <div *ngIf=\"statusCode === 500\" [ngClass]=\"'error'\">\r\n            Internal Server Error.\r\n        </div>\r\n    </div>\r\n</div>\r\n<div *ngIf=\"visibleTable\">\r\n    <h3>Title Details</h3>\r\n    <table>\r\n        <tr><th>Movie title</th> <th>Director</th></tr>\r\n        <tr *ngFor=\"let elem of allMovies\">\r\n            <td><a href=\"{{elem.imdbu}}\">{{elem.name}}&nbsp;</a></td>\r\n            <td>{{elem.director}}</td>\r\n            <td><button type=\"button\" (click)=\"addTitle(elem)\">Add</button> </td>\r\n        </tr>\r\n    </table>\r\n</div>\r\n\r\n";
 
 /***/ }),
 /* 29 */

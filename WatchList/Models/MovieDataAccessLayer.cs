@@ -59,7 +59,7 @@ namespace WatchList.Models
         public IEnumerable<Movie> GetResultsBy(string name)
         {
             List<Movie> resultsTL = new List<Movie>();
-            var url = "https://www.imdb.com/find?ref_=nv_sr_fn&q="+ name + "&s=all/";
+            var url = "https://www.imdb.com/find?ref_=nv_sr_fn&q=" + name + "&s=all/";
             var web = new HtmlWeb();
             var doc = web.Load(url);
             var links = doc.DocumentNode.SelectNodes("//div[@class = 'findSection']");
@@ -70,33 +70,39 @@ namespace WatchList.Models
             {
                 if (node.Name == "tr")
                 {
+                    resultsTL.Add(new Movie());
                     foreach (var nodetd in node.ChildNodes)
                     {
-                        if (nodetd.Name == "td" && nodetd.OuterHtml.IndexOf("result_text") != -1)
+                        if (nodetd.Name == "td" && (nodetd.OuterHtml.IndexOf("result_text") != -1 || nodetd.OuterHtml.IndexOf("primary_photo") != -1))
                         {
-                            var film = node.SelectSingleNode(".//a").Attributes["href"].Value;
-                            resultsTL.Add(new Movie());
-                            resultsTL[t].IMDBU = "https://www.imdb.com" + film;
+                            if (nodetd.OuterHtml.IndexOf("result_text") != -1)
+                            {
+                                var film = node.SelectSingleNode(".//a").Attributes["href"].Value;
+                                resultsTL[t].IMDBU = "https://www.imdb.com" + film;
+                                var resultWebdoc = web.Load(resultsTL[t].IMDBU);
+                                var namelink = resultWebdoc.DocumentNode.SelectNodes("//div[@class = 'title_wrapper']");
+                                resultsTL[t].Name = namelink[0].SelectSingleNode(".//h1").InnerText;
+                                var directorlink = resultWebdoc.DocumentNode.SelectNodes("//div[@class = 'credit_summary_item']");
+                                resultsTL[t].Director = directorlink == null ? " " : directorlink[0].InnerText;
+                                var noteslink = resultWebdoc.DocumentNode.SelectNodes("//div[@class = 'summary_text']");
+                                resultsTL[t].Notes = directorlink == null ? " " : noteslink[0].InnerText;
+                                //var ratinglink = resultWebdoc.DocumentNode.SelectNodes("//div[@class = 'ratingValue']");
+                                //resultsTL[t].IMDBR = ratinglink == null ? "0" : ratinglink[t].InnerText;
+                                resultsTL[t].IMGU = resultsTL[t].IMGU == null ? " " : resultsTL[t].IMGU;
+                            }
+                            if (nodetd.OuterHtml.IndexOf("primary_photo") != -1)
+                            {
+                                var photo = nodetd.SelectSingleNode(".//img").Attributes["src"].Value;
+                                resultsTL[t].IMGU = photo == null ? " " : photo;
+                            }
 
-                            var resultWebdoc = web.Load(resultsTL[t].IMDBU);
-                            var namelink = resultWebdoc.DocumentNode.SelectNodes("//div[@class = 'title_wrapper']");
-                            resultsTL[t].Name = namelink[0].SelectSingleNode(".//h1").InnerText;
-                            var directorlink = resultWebdoc.DocumentNode.SelectNodes("//div[@class = 'credit_summary_item']");
-                            resultsTL[t].Director = "0";//directorlink[0].InnerText;
-                            //var descriptionlink = resultWebdoc.DocumentNode.SelectNodes("//div[@class = 'summary_text']");
-                            //resultsTL[t].Description = descriptionlink[0].InnerText;
-                            //var ratinglink = resultWebdoc.DocumentNode.SelectNodes("//div[@class = 'ratingValue']");
-                            //resultsTL[t].IMDBR = "0";//ratinglink[t].InnerText;
-                            //resultsTL[t].ID = t;
-                            ++t;
                         }
                     }
+
+                    ++t;
                 }
 
             }
-
-            
-
             return resultsTL;
         }
 
