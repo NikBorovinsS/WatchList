@@ -36,21 +36,22 @@ export class WatchlistComponent{
 
     OnStatusChange(elem: any, newStatus:number) {
         
-        console.log("Itsalive");
-
         elem.status = newStatus;
 
         this._titlesService.updateTitle(elem)
             .subscribe((data) => {
                 this._router.navigate(['/fetch-title']);
             }, error => console.error(error))
+    }
 
-        //let args: string = id.toString() + newStatus.toString();
+    OnScoreChange(elem: any, newScore: number) {
 
-        //this._titlesService.updateStatus(args)
-        //    .subscribe((data) => {
-        //        this._router.navigate(['/fetch-title']);
-        //    }, error => console.error(error));
+        elem.score = newScore;
+
+        this._titlesService.updateTitle(elem)
+            .subscribe((data) => {
+                this._router.navigate(['/fetch-title']);
+            }, error => console.error(error))
     }
 
     delete(titleID) {

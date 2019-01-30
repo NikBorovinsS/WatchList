@@ -17,7 +17,7 @@ namespace WatchList.Models
         {
             try
             {
-                  List<Movie> titles = new List<Movie>();
+                List<Movie> titles = new List<Movie>();
 
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
@@ -75,19 +75,15 @@ namespace WatchList.Models
                     {
                         if (nodetd.Name == "td" && (nodetd.OuterHtml.IndexOf("result_text") != -1 || nodetd.OuterHtml.IndexOf("primary_photo") != -1))
                         {
+
                             if (nodetd.OuterHtml.IndexOf("result_text") != -1)
                             {
                                 var film = node.SelectSingleNode(".//a").Attributes["href"].Value;
                                 resultsTL[t].IMDBU = "https://www.imdb.com" + film;
                                 var resultWebdoc = web.Load(resultsTL[t].IMDBU);
-                                var namelink = resultWebdoc.DocumentNode.SelectNodes("//div[@class = 'title_wrapper']");
-                                resultsTL[t].Name = namelink[0].SelectSingleNode(".//h1").InnerText;
-                                var directorlink = resultWebdoc.DocumentNode.SelectNodes("//div[@class = 'credit_summary_item']");
-                                resultsTL[t].Director = directorlink == null ? " " : directorlink[0].InnerText;
-                                var noteslink = resultWebdoc.DocumentNode.SelectNodes("//div[@class = 'summary_text']");
-                                resultsTL[t].Notes = directorlink == null ? " " : noteslink[0].InnerText;
-                                //var ratinglink = resultWebdoc.DocumentNode.SelectNodes("//div[@class = 'ratingValue']");
-                                //resultsTL[t].IMDBR = ratinglink == null ? "0" : ratinglink[t].InnerText;
+                                resultsTL[t].Name = NodeLink(resultWebdoc, "//div[@class = 'title_wrapper']", ".//h1");
+                                resultsTL[t].Director = NodeLink(resultWebdoc, "//div[@class = 'credit_summary_item']", " ");
+                                resultsTL[t].IMDBR = NodeLink(resultWebdoc, "//div[@class = 'ratingValue']", " ");
                                 resultsTL[t].IMGU = resultsTL[t].IMGU == null ? " " : resultsTL[t].IMGU;
                             }
                             if (nodetd.OuterHtml.IndexOf("primary_photo") != -1)
@@ -95,16 +91,28 @@ namespace WatchList.Models
                                 var photo = nodetd.SelectSingleNode(".//img").Attributes["src"].Value;
                                 resultsTL[t].IMGU = photo == null ? " " : photo;
                             }
-
                         }
                     }
-
                     ++t;
                 }
 
             }
             return resultsTL;
         }
+
+        private string NodeLink(HtmlDocument resultWebdoc, string node, string node1)
+        {
+            string res;
+            var link = resultWebdoc.DocumentNode.SelectNodes(node);
+            if (node1 != " ")
+                res = link[0].SelectSingleNode(node1).InnerText;
+            else
+                res = link == null ? " " : link[0].InnerText;
+            res = res.Replace("\n", " ").Trim();
+            res = res.Replace("&nbsp;", " ").Trim();
+            return res;
+        }
+
 
         public int AddTitle(Movie title)
         {
@@ -149,13 +157,11 @@ namespace WatchList.Models
             var doc = web.Load(imdbu);
 
             var resultWebdoc = web.Load(imdbu);
-            var namelink = resultWebdoc.DocumentNode.SelectNodes("//div[@class = 'title_wrapper']");
-            temp.Name = namelink[0].SelectSingleNode(".//h1").InnerText;
-            var directorlink = resultWebdoc.DocumentNode.SelectNodes("//div[@class = 'credit_summary_item']");
-            temp.Director = "0";//directorlink[0].InnerText;
-            var ratinglink = resultWebdoc.DocumentNode.SelectNodes("//div[@class = 'ratingValue']");
-            temp.IMDBR = "0";//ratinglink[t].InnerText;
-
+            temp.Name = NodeLink(resultWebdoc, "//div[@class = 'title_wrapper']", ".//h1");
+            temp.Director = NodeLink(resultWebdoc, "//div[@class = 'credit_summary_item']", " ");
+            temp.IMDBR = NodeLink(resultWebdoc, "//div[@class = 'ratingValue']", " ");
+            temp.Notes = NodeLink(resultWebdoc, "//div[@class = 'summary_text']", " ");
+            temp.IMGU = " ";
             AddTitle(temp);
 
             return 1;
@@ -195,7 +201,7 @@ namespace WatchList.Models
                 throw;
             }
         }
-        
+
 
         public Movie GetTitleData(int id)
         {

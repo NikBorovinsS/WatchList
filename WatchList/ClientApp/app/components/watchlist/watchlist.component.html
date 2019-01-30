@@ -30,7 +30,21 @@
                     <option [ngValue]=1>Watched</option>
                 </select>
             </td>
-            <td>{{ elem.score }}</td>
+            <td align="center">
+                <select [ngModel]="elem.score" (ngModelChange)="OnScoreChange(elem, $event)">
+                    <option [ngValue]=0>-Select score-</option>
+                    <option [ngValue]=1>(1)</option>
+                    <option [ngValue]=2>(2)</option>
+                    <option [ngValue]=3>(3)</option>
+                    <option [ngValue]=4>(4)</option>
+                    <option [ngValue]=5>(5)</option>
+                    <option [ngValue]=6>(6)</option>
+                    <option [ngValue]=7>(7)</option>
+                    <option [ngValue]=8>(8)</option>
+                    <option [ngValue]=9>(9)</option>
+                    <option [ngValue]=10>(10)</option>
+                </select>
+            </td>
             <td>{{ elem.imdbr }}</td>
             <td>
             <td>
