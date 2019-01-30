@@ -16,7 +16,7 @@ export class createtitle implements OnInit {
     searchForm: FormGroup;
     title: string = "Create";
     titleForm: FormGroup;
-    id: number;
+    id: number = 0;
     errorMessage: any;
     processValidation = false;
     visibleTable = false; 
@@ -105,5 +105,10 @@ interface MovieData {
     status: number;
     score: number;
     imdbu: string;
-    imdbr: string;
+    imgu: string;
+    imgup: string;
+    tytletype: string;
+    watchprogress: string;
+    notes: string;
+    episodes: string;
 }

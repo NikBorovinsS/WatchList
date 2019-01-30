@@ -1,3 +1,21 @@
+/*@charset "utf-8";
+
+@font-face {
+    font-family: 'lato-light';
+    src: url('../environments/fonts/Lato-Light.ttf');
+}
+
+@font-face {
+    font-family: 'lato-bold';
+    src: url('../environments/fonts/Lato-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'lato-regular';
+    src: url('../environments/fonts/Lato-Regular.ttf');
+}*/
+
+
 @media (max-width: 767px) {
     /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */
     .body-content {
