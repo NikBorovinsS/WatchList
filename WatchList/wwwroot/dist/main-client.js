@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "7a45886ed8b5845acbef"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "971e8eae561f0c4cc059"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -1786,6 +1786,7 @@ var createtitle = (function () {
         this._titlesService = _titlesService;
         this._router = _router;
         this.title = "Create";
+        this.id = 0;
         this.processValidation = false;
         this.visibleTable = false;
         this.allMovies = [];
@@ -2100,7 +2101,7 @@ exports = module.exports = __webpack_require__(5)(undefined);
 
 
 // module
-exports.push([module.i, "h1 {\r\n    font-size: 2.0em;\r\n    margin: 20px 0 0 0;\r\n    font-weight: 400;\r\n}\r\n\r\nh3 {\r\n    color: blue;\r\n}\r\n\r\ntable {\r\n    border-collapse: collapse;\r\n}\r\n\r\ntable, th, td {\r\n    border: 1px solid black;\r\n    font-size: 17px;\r\n}\r\n\r\ninput {\r\n    width: 225px;\r\n    margin: 8px 0;\r\n    background-color: #dfdfdf;\r\n    font-size: 17px;\r\n}\r\n\r\nbutton {\r\n    background-color: #008CBA;\r\n    color: white;\r\n}\r\n\r\n.error {\r\n    color: red;\r\n    font-size: 20px;\r\n}\r\n\r\n.success {\r\n    color: green;\r\n    font-size: 20px;\r\n}\r\n", ""]);
+exports.push([module.i, "\nh1 {\n    font-size: 2.0em;\n    margin: 20px 0 0 0;\n    font-weight: 400;\n}\n\nh3 {\n    color: Black;\n}\n\ntable {\n    border-collapse: collapse;\n    align-content: center;\n}\n\ntable, th, td, tr {\n    border: 1px solid whitesmoke;\n    border-radius: 4px;\n    margin: 10px;\n    font-size: 17px;\n    padding:0px 10px 0px 10px;\n    text-align: center;\n}\nimg{\r\n    border-radius:4px;\r\n    margin: 10px;\r\n    display:block;\r\n}\n\ninput {\n    margin:10px;\n    width: 225px;\n    margin: 10px;\n    background-color: #dfdfdf;\n    font-size: 17px;\n    border-radius:4px;\n    border: 1px solid #dadada;\n}\n\nbutton {\n    margin:10px;\n    background-color: #008CBA;\n    color: white;\n    border:none;\n}\n\n.error {\n    color: red;\n    font-size: 20px;\n}\n\n.success {\n    color: green;\n    font-size: 20px;\n}\n", ""]);
 
 // exports
 
@@ -2114,7 +2115,7 @@ exports = module.exports = __webpack_require__(5)(undefined);
 
 
 // module
-exports.push([module.i, "@media (max-width: 767px) {\n    /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */\n    .body-content {\n        padding-top: 50px;\n    }\n}\n", ""]);
+exports.push([module.i, "/*@charset \"utf-8\";\r\n\r\n@font-face {\r\n    font-family: 'lato-light';\r\n    src: url('../environments/fonts/Lato-Light.ttf');\r\n}\r\n\r\n@font-face {\r\n    font-family: 'lato-bold';\r\n    src: url('../environments/fonts/Lato-Bold.ttf');\r\n}\r\n\r\n@font-face {\r\n    font-family: 'lato-regular';\r\n    src: url('../environments/fonts/Lato-Regular.ttf');\r\n}*/\r\n\r\n\n@media (max-width: 767px) {\n    /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */\n    .body-content {\n        padding-top: 50px;\n    }\n}", ""]);
 
 // exports
 
@@ -2128,7 +2129,7 @@ exports = module.exports = __webpack_require__(5)(undefined);
 
 
 // module
-exports.push([module.i, "li .glyphicon {\n    margin-right: 10px;\n}\n\n/* Highlighting rules for nav menu items */\nli.link-active a,\nli.link-active a:hover,\nli.link-active a:focus {\n    background-color: #4189C7;\n    color: white;\n}\n\n/* Keep the nav menu independent of scrolling and on top of other items */\n.main-nav {\n    position: fixed;\n    top: 0;\n    left: 0;\n    right: 0;\n    z-index: 1;\n}\n\n@media (min-width: 768px) {\n    /* On small screens, convert the nav menu to a vertical sidebar */\n    .main-nav {\n        height: 100%;\n        width: calc(25% - 20px);\n    }\n    .navbar {\n        border-radius: 0px;\n        border-width: 0px;\n        height: 100%;\n    }\n    .navbar-header {\n        float: none;\n    }\n    .navbar-collapse {\n        border-top: 1px solid #444;\n        padding: 0px;\n    }\n    .navbar ul {\n        float: none;\n    }\n    .navbar li {\n        float: none;\n        font-size: 15px;\n        margin: 6px;\n    }\n    .navbar li a {\n        padding: 10px 16px;\n        border-radius: 4px;\n    }\n    .navbar a {\n        /* If a menu item's text is too long, truncate it */\n        width: 100%;\n        white-space: nowrap;\n        overflow: hidden;\n        text-overflow: ellipsis;\n    }\n}\n", ""]);
+exports.push([module.i, "li .glyphicon {\n    margin-right: 10px;\n}\n\n/* Highlighting rules for nav menu items */\nli.link-active a,\nli.link-active a:hover,\nli.link-active a:focus {\n    background-color: black;\n    color: white;\n    border-bottom:5px solid whitesmoke;\n}\n\n/* Keep the nav menu independent of scrolling and on top of other items */\n.main-nav {\n    margin: 0px auto;\n    z-index: 1;\n}\n.navbar {\n    max-height: 60px;\n}\n\n@media (min-width: 768px) {\n    /* On small screens, convert the nav menu to a vertical sidebar */\n    .main-nav {\n        margin:0px auto;\n    }\n    .navbar {\n        border-radius: 0px;\n        border-width: 0px;\n        display: flex;\n        justify-content: center;\n    }\n    .navbar-header {\n        float: none;\n    }\n    .navbar-collapse {\n        border-top: 1px solid #444;\n        padding: 0px;\n    }\n    .navbar ul {\n        display: flex;\n        justify-content: center;\n    }\n    .navbar li {\n        font-size: 15px;\n        margin: 6px;\n    }\n    .navbar li a {\n        padding: 10px 16px;\n    }\n    .navbar a {\n        /* If a menu item's text is too long, truncate it */\n        width: 100%;\n        white-space: nowrap;\n        overflow: hidden;\n        text-overflow: ellipsis;\n    }\n}\n", ""]);
 
 // exports
 
@@ -2463,13 +2464,13 @@ module.exports = XmlEntities;
 /* 28 */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>{{title}}</h1>\r\n<h3>Title</h3>\r\n<hr />\r\n\r\n<ng-template #create>\r\n    <h3> Create New Title </h3>\r\n</ng-template>\r\n<div>\r\n    <form [formGroup]=\"searchForm\" (ngSubmit)=\"onTitleFormSubmit()\">\r\n        <table>\r\n            <tr>\r\n                <td>Enter movie or TV show</td>\r\n                <td>\r\n                    <input formControlName=\"film\">\r\n                    <label *ngIf=\"searchForm.get('film').invalid && processValidation\" [ngClass]=\"'error'\"> Title is required. </label>\r\n                </td>\r\n            </tr>\r\n            <tr>\r\n                <td colspan=\"2\">\r\n                    <button *ngIf=\"!visibleTable\" type=\"submit\" class=\"btn btn-default\">Search</button>\r\n                    <button class=\"btn\" (click)=\"cancel()\">Cancel</button>\r\n                </td>\r\n            </tr>\r\n        </table>\r\n    </form>\r\n    <br />\r\n    <div *ngIf=\"statusCode; else processing\">\r\n        <div *ngIf=\"statusCode === 201\" [ngClass]=\"'success'\">\r\n            Title added successfully.\r\n        </div>\r\n        <div *ngIf=\"statusCode === 409\" [ngClass]=\"'success'\">\r\n            Title already exists.\r\n        </div>\r\n        <div *ngIf=\"statusCode === 200\" [ngClass]=\"'success'\">\r\n            Title updated successfully.\r\n        </div>\r\n        <div *ngIf=\"statusCode === 204\" [ngClass]=\"'success'\">\r\n            Title deleted successfully.\r\n        </div>\r\n        <div *ngIf=\"statusCode === 500\" [ngClass]=\"'error'\">\r\n            Internal Server Error.\r\n        </div>\r\n    </div>\r\n</div>\r\n<div *ngIf=\"visibleTable\">\r\n    <h3>Title Details</h3>\r\n    <table>\r\n        <tr><th>Movie title</th> <th>Director</th></tr>\r\n        <tr *ngFor=\"let elem of allMovies\">\r\n            <td><img src={{elem.imgu}} alt=\"\" /></td>\r\n            <td><a href=\"{{elem.imdbu}}\">{{elem.name}}&nbsp;</a></td>\r\n            <td>{{elem.director}}</td>\r\n            <td><button type=\"button\" (click)=\"addTitle(elem)\">Add</button> </td>\r\n        </tr>\r\n    </table>\r\n</div>\r\n";
+module.exports = "<h1>{{title}}</h1>\n<h3>Title</h3>\n<hr />\n\n<ng-template #create>\n    <h3> Create New Title </h3>\n</ng-template>\n<div>\n    <form [formGroup]=\"searchForm\" (ngSubmit)=\"onTitleFormSubmit()\">\n        <table>\n            <tr>\n                <td>Enter movie or TV show</td>\n                <td>\n                    <input formControlName=\"film\">\n                    <label *ngIf=\"searchForm.get('film').invalid && processValidation\" [ngClass]=\"'error'\"> Title is required. </label>\n                </td>\n            </tr>\n            <tr>\n                <td colspan=\"2\">\n                    <button *ngIf = \"!visibleTable\" type=\"submit\" class=\"btn btn-default\">Search</button>\n                    <button class=\"btn\" (click)=\"cancel()\">Cancel</button>\n                </td>\n            </tr>\n        </table>\n    </form>\n    <br />\n    <div *ngIf=\"statusCode; else processing\">\n        <div *ngIf=\"statusCode === 201\" [ngClass]=\"'success'\">\n            Title added successfully.\n        </div>\n        <div *ngIf=\"statusCode === 409\" [ngClass]=\"'success'\">\n            Title already exists.\n        </div>\n        <div *ngIf=\"statusCode === 200\" [ngClass]=\"'success'\">\n            Title updated successfully.\n        </div>\n        <div *ngIf=\"statusCode === 204\" [ngClass]=\"'success'\">\n            Title deleted successfully.\n        </div>\n        <div *ngIf=\"statusCode === 500\" [ngClass]=\"'error'\">\n            Internal Server Error.\n        </div>\n    </div>\n</div>\n<div *ngIf=\"visibleTable\">\n    <h3>Title Details</h3>\n    <table>\n        <tr><th>Movie title</th> <th>Director</th></tr>\n        <tr *ngFor=\"let elem of allMovies\">\r\n            <td><img src={{elem.imgup}} alt=\"\" /></td>\r\n            <td><a href=\"{{elem.imdbu}}\">{{elem.name}}&nbsp;</a></td>\r\n            <td>{{elem.director}}</td>\r\n            <td><button type=\"button\" (click)=\"addTitle(elem)\">Add</button> </td>\r\n        </tr>\n    </table>\n</div>\n\n";
 
 /***/ }),
 /* 29 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class='container-fluid'>\n    <div class='row'>\n        <div class='col-sm-3'>\n            <nav-menu></nav-menu>\n        </div>\n        <div class='col-sm-9 body-content'>\n            <router-outlet></router-outlet>\n        </div>\n    </div>\n</div>\n";
+module.exports = "<div class='container-fluid'>\n    <nav-menu></nav-menu>\n        <div class=\"container\">\n            <router-outlet></router-outlet>\n        </div>\n</div>\n";
 
 /***/ }),
 /* 30 */
@@ -2487,7 +2488,7 @@ module.exports = "<h1>Hello, world!</h1>\n<p>Welcome to your new single-page app
 /* 32 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class='main-nav'>\n    <div class='navbar navbar-inverse'>\n        <div class='navbar-header'>\n            <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>\n                <span class='sr-only'>Toggle navigation</span>\n                <span class='icon-bar'></span>\n                <span class='icon-bar'></span>\n                <span class='icon-bar'></span>\n            </button>\n            <a class='navbar-brand' [routerLink]=\"['/home']\">ASPCoreWithAngular</a>\n        </div>\n        <div class='clearfix'></div>\n        <div class='navbar-collapse collapse'>\n            <ul class='nav navbar-nav'>\n                <li [routerLinkActive]=\"['link-active']\">\n                    <a [routerLink]=\"['/home']\">\n                        <span class='glyphicon glyphicon-home'></span> Home\n                    </a>\n                </li>\n                <li [routerLinkActive]=\"['link-active']\">\n                    <a [routerLink]=\"['/fetch-title']\">\n                        <span class='glyphicon glyphicon-th-list'></span> Watchlist\n                    </a>\n                </li>\n            </ul>\n        </div>\n    </div>\n</div>\n";
+module.exports = "<div class='main-nav'>\n    <div class='navbar navbar-inverse'>\n        <div class='navbar-header'>\n            <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>\n                <span class='sr-only'>Toggle navigation</span>\n                <span class='icon-bar'></span>\n                <span class='icon-bar'></span>\n                <span class='icon-bar'></span>\n            </button>\n            <a class='navbar-brand' [routerLink]=\"['/home']\">WatchList</a>\n        </div>\n        <div class='clearfix'></div>\n        <div class='navbar-collapse collapse'>\n            <ul class='nav navbar-nav'>\n                <li [routerLinkActive]=\"['link-active']\">\n                    <a [routerLink]=\"['/home']\">\n                        <span class='glyphicon glyphicon-home'></span> Home\n                    </a>\n                </li>\n                <li [routerLinkActive]=\"['link-active']\">\n                    <a [routerLink]=\"['/fetch-title']\">\n                        <span class='glyphicon glyphicon-th-list'></span> Watchlist\n                    </a>\n                </li>\n            </ul>\n        </div>\n    </div>\n</div>\n";
 
 /***/ }),
 /* 33 */

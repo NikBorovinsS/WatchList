@@ -83,7 +83,12 @@ namespace WatchList.Models
                                 var resultWebdoc = web.Load(resultsTL[t].IMDBU);
                                 resultsTL[t].Name = NodeLink(resultWebdoc, "//div[@class = 'title_wrapper']", ".//h1");
                                 resultsTL[t].Director = NodeLink(resultWebdoc, "//div[@class = 'credit_summary_item']", " ");
+                                resultsTL[t].Notes = NodeLink(resultWebdoc, "//div[@class = 'summary_text']", " ");
                                 resultsTL[t].IMDBR = NodeLink(resultWebdoc, "//div[@class = 'ratingValue']", " ");
+
+                                var photoPoste = resultWebdoc.DocumentNode.SelectNodes("//div[@class = 'poster']");
+                                resultsTL[t].IMGUP = photoPoste == null ? " " : photoPoste[0].SelectSingleNode(".//img").Attributes["src"].Value;
+                                resultsTL[t].IMGUP = resultsTL[t].IMGUP == null ? " " : resultsTL[t].IMGUP;
                                 resultsTL[t].IMGU = resultsTL[t].IMGU == null ? " " : resultsTL[t].IMGU;
                             }
                             if (nodetd.OuterHtml.IndexOf("primary_photo") != -1)
@@ -176,18 +181,10 @@ namespace WatchList.Models
                     SqlCommand cmd = new SqlCommand("spUpdateTitleList", con);
                     cmd.CommandType = CommandType.StoredProcedure;
 
-                    //cmd.Parameters.AddWithValue("@Name", title.Name);
+                    
                     cmd.Parameters.AddWithValue("@Id", title.ID);
-                    //cmd.Parameters.AddWithValue("@Director", title.Director);
-                    //cmd.Parameters.AddWithValue("@IMDBU", title.IMDBU);
-                    //cmd.Parameters.AddWithValue("@IMDBR", title.IMDBR);
                     cmd.Parameters.AddWithValue("@Status", title.Status);
                     cmd.Parameters.AddWithValue("@Score", title.Score);
-                    //cmd.Parameters.AddWithValue("@IMGU", title.IMGU);
-                    //cmd.Parameters.AddWithValue("@TitleType", title.TitleType);
-                    //cmd.Parameters.AddWithValue("@WatchProgress", title.WatchProgress);
-                    //cmd.Parameters.AddWithValue("@Episodes", title.Episodes);
-                    //cmd.Parameters.AddWithValue("@Notes",title.Notes);
 
 
                     con.Open();

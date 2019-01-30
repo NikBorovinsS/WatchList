@@ -1,0 +1,15 @@
+CREATE TABLE [dbo].[TitlesList] (
+    [Id]            INT         IDENTITY (1, 1) NOT NULL,
+    [Name]          NCHAR (128) NULL,
+    [Director]      NCHAR (32)  NULL,
+    [Status]        INT         NULL,
+    [Score]         INT         NULL,
+    [IMDBU]         NCHAR (128) NULL,
+    [IMDBR]         NCHAR (16)  NULL,
+    [IMGU]          NCHAR (128)  NULL,
+    [TitleType]     INT         NULL,
+    [WatchProgress] INT         NULL,
+    [Episodes]      INT         NULL,
+    [Notes]         NCHAR (256) NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);

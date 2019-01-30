@@ -1,0 +1,50 @@
+CREATE procedure spAddTitle         
+(        
+    @Name            NCHAR (128),
+    @IMDBU           NCHAR (128),
+    @IMDBR            NCHAR (8),
+    @Director         NCHAR (32),
+    @Status           INT,
+    @Score            INT,
+	@IMGU			NCHAR (128),
+	@TitleType		INT,
+	@WatchProgress  INT,
+	@Episodes		INT,
+	@Notes			NCHAR(256)
+	)        
+as         
+Begin         
+    Insert into TitlesList(Name,IMDBU, IMDBR, Director, Status, Score, IMGU, TitleType, WatchProgress, Episodes, Notes)         
+    Values (@Name,@IMDBU, @IMDBR, @Director, @Status, @Score, @IMGU, @TitleType, @WatchProgress,@Episodes, @Notes)         
+End
+
+Create procedure spDeleteTitles       
+(        
+   @Id int
+)        
+as         
+begin        
+   Delete from TitlesList where Id=@Id        
+End
+
+Create procedure spGetAllTitles
+as      
+Begin      
+    select *      
+    from TitlesList
+    order by Id      
+End
+
+CREATE procedure spUpdateTitleList        
+(
+	@Id				  INT,
+    @Status          INT,
+    @Score           INT
+)        
+as        
+begin        
+   Update TitlesList         
+   set Score=@Score,
+   Status=@Status
+   where Id=@Id        
+End

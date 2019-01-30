@@ -23,6 +23,8 @@ namespace WatchList.Models
 
         public string IMGU { get; set; }
 
+        public string IMGUP { get; set; }
+
         public int TitleType { get; set; }
 
         public int WatchProgress { get; set; }
